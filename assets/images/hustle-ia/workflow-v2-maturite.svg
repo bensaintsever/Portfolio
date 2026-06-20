@@ -1,0 +1,90 @@
+<svg viewBox="0 0 920 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t2 d2" font-family="'Space Grotesk', system-ui, sans-serif">
+  <title id="t2">Workflow de conception assisté par IA, version flux et couches de maturité</title>
+  <desc id="d2">Un flux principal établi (design system, génération Claude Code, raffinage designer, implémentation devs) surmonte une bande montrant trois niveaux de maturité d'outils : établi, en POC avec Claude Design, et écarté avec Bridge.</desc>
+
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#17171b"/>
+    </marker>
+  </defs>
+
+  <rect width="920" height="560" fill="#f6f6f3"/>
+
+  <text x="40" y="48" font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="1.5" fill="#6e6e73">WORKFLOW IA, ANCRÉ SUR LE DESIGN SYSTEM</text>
+  <text x="40" y="76" font-size="22" font-weight="600" fill="#17171b">Je pilote, l'IA exécute</text>
+
+  <!-- ===== FLUX PRINCIPAL ===== -->
+  <text x="40" y="120" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1.2" fill="#6e6e73">LE FLUX ÉTABLI, AU QUOTIDIEN</text>
+
+  <g>
+    <!-- carte génération -->
+    <rect x="40" y="136" width="170" height="100" rx="12" fill="#ffffff" stroke="#e4e4de"/>
+    <rect x="40" y="136" width="4" height="100" rx="2" fill="#7b61ff"/>
+    <text x="62" y="168" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="1" fill="#7b61ff">IA</text>
+    <text x="62" y="192" font-size="15" font-weight="600" fill="#17171b">Génération</text>
+    <text x="62" y="214" font-size="12" fill="#6e6e73">Claude Code</text>
+
+    <!-- carte raffinage -->
+    <rect x="250" y="136" width="170" height="100" rx="12" fill="#ffffff" stroke="#e4e4de"/>
+    <rect x="250" y="136" width="4" height="100" rx="2" fill="#c2f24d"/>
+    <text x="272" y="168" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="1" fill="#17171b">DESIGNER</text>
+    <text x="272" y="192" font-size="15" font-weight="600" fill="#17171b">Raffinage</text>
+    <text x="272" y="214" font-size="12" fill="#6e6e73">arbitrage, qualité</text>
+
+    <!-- carte conception -->
+    <rect x="460" y="136" width="170" height="100" rx="12" fill="#ffffff" stroke="#e4e4de"/>
+    <rect x="460" y="136" width="4" height="100" rx="2" fill="#c2f24d"/>
+    <text x="482" y="168" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="1" fill="#17171b">DESIGNER</text>
+    <text x="482" y="192" font-size="15" font-weight="600" fill="#17171b">Conception</text>
+    <text x="482" y="214" font-size="12" fill="#6e6e73">maquette validée</text>
+
+    <!-- carte implémentation -->
+    <rect x="670" y="136" width="210" height="100" rx="12" fill="#ffffff" stroke="#e4e4de"/>
+    <rect x="670" y="136" width="4" height="100" rx="2" fill="#17171b"/>
+    <text x="692" y="168" font-family="'IBM Plex Mono', monospace" font-size="10" letter-spacing="1" fill="#6e6e73">DÉVELOPPEURS</text>
+    <text x="692" y="192" font-size="15" font-weight="600" fill="#17171b">Implémentation</text>
+    <text x="692" y="214" font-size="12" fill="#6e6e73">pont par les tokens</text>
+
+    <!-- flèches -->
+    <line x1="212" y1="186" x2="246" y2="186" stroke="#17171b" stroke-width="1.5" marker-end="url(#ar2)"/>
+    <line x1="422" y1="186" x2="456" y2="186" stroke="#17171b" stroke-width="1.5" marker-end="url(#ar2)"/>
+    <line x1="632" y1="186" x2="666" y2="186" stroke="#17171b" stroke-width="1.5" marker-end="url(#ar2)"/>
+  </g>
+
+  <!-- design system foundation -->
+  <rect x="40" y="272" width="840" height="80" rx="12" fill="#eef0ff" stroke="#d6dbff"/>
+  <text x="62" y="304" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1.2" fill="#7b61ff">SOCLE</text>
+  <text x="62" y="328" font-size="15.5" font-weight="600" fill="#17171b">Design system</text>
+  <text x="200" y="328" font-size="13" fill="#3a3a40">tokens sémantiques · 4 thèmes · composants · code base</text>
+  <g stroke="#b9c0ff" stroke-width="1.2" stroke-dasharray="3 4">
+    <line x1="125" y1="236" x2="125" y2="272"/>
+    <line x1="335" y1="236" x2="335" y2="272"/>
+    <line x1="545" y1="236" x2="545" y2="272"/>
+    <line x1="775" y1="236" x2="775" y2="272"/>
+  </g>
+
+  <!-- ===== COUCHES DE MATURITÉ ===== -->
+  <text x="40" y="404" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1.2" fill="#6e6e73">LES OUTILS, PAR NIVEAU DE MATURITÉ</text>
+
+  <!-- établi -->
+  <rect x="40" y="420" width="270" height="108" rx="12" fill="#ffffff" stroke="#cde39a"/>
+  <circle cx="62" cy="450" r="5" fill="#7aa400"/>
+  <text x="78" y="454" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1" fill="#5a7d00">ÉTABLI</text>
+  <text x="62" y="484" font-size="14.5" font-weight="600" fill="#17171b">Claude Code, MCP Figma</text>
+  <text x="62" y="506" font-size="12.5" fill="#6e6e73">génération + harmonisation des fichiers</text>
+
+  <!-- POC -->
+  <rect x="325" y="420" width="270" height="108" rx="12" fill="#ffffff" stroke="#d6dbff"/>
+  <circle cx="347" cy="450" r="5" fill="#7b61ff"/>
+  <text x="363" y="454" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1" fill="#7b61ff">EN POC</text>
+  <text x="347" y="484" font-size="14.5" font-weight="600" fill="#17171b">Claude Design</text>
+  <text x="347" y="504" font-size="11.5" fill="#6e6e73">DS calqué sur le repo,</text>
+  <text x="347" y="519" font-size="11.5" fill="#6e6e73">proto raffiné avec Claude Code</text>
+
+  <!-- écarté -->
+  <rect x="610" y="420" width="270" height="108" rx="12" fill="#fbfbf9" stroke="#e4e4de"/>
+  <circle cx="632" cy="450" r="5" fill="#b6b6bb"/>
+  <text x="648" y="454" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1" fill="#9a9aa0">TESTÉ PUIS ÉCARTÉ</text>
+  <text x="632" y="484" font-size="14.5" font-weight="600" fill="#9a9aa0" text-decoration="line-through">Bridge</text>
+  <text x="632" y="506" font-size="12.5" fill="#9a9aa0">trop lent, trop coûteux en tokens</text>
+</svg>

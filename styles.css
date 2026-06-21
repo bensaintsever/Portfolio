@@ -261,9 +261,12 @@ figure { margin: 0; }
 }
 .nav-location::before {
   content: '';
-  width: 5px; height: 5px;
-  background: var(--c-accent);
-  border-radius: 50%;
+  width: 15px; height: 15px;
+  flex: 0 0 auto;
+  background-color: #d8362f;
+  /* Croix occitane (croix de Toulouse) en rouge occitan — clin d'œil local */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='black'%3E%3Cpolygon points='44,44 56,44 64,20 36,20'/%3E%3Cpolygon points='44,56 56,56 64,80 36,80'/%3E%3Cpolygon points='44,44 44,56 20,64 20,36'/%3E%3Cpolygon points='56,44 56,56 80,64 80,36'/%3E%3Crect x='44' y='44' width='12' height='12'/%3E%3Ccircle cx='36' cy='18' r='4'/%3E%3Ccircle cx='50' cy='14' r='4'/%3E%3Ccircle cx='64' cy='18' r='4'/%3E%3Ccircle cx='36' cy='82' r='4'/%3E%3Ccircle cx='50' cy='86' r='4'/%3E%3Ccircle cx='64' cy='82' r='4'/%3E%3Ccircle cx='18' cy='36' r='4'/%3E%3Ccircle cx='14' cy='50' r='4'/%3E%3Ccircle cx='18' cy='64' r='4'/%3E%3Ccircle cx='82' cy='36' r='4'/%3E%3Ccircle cx='86' cy='50' r='4'/%3E%3Ccircle cx='82' cy='64' r='4'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='black'%3E%3Cpolygon points='44,44 56,44 64,20 36,20'/%3E%3Cpolygon points='44,56 56,56 64,80 36,80'/%3E%3Cpolygon points='44,44 44,56 20,64 20,36'/%3E%3Cpolygon points='56,44 56,56 80,64 80,36'/%3E%3Crect x='44' y='44' width='12' height='12'/%3E%3Ccircle cx='36' cy='18' r='4'/%3E%3Ccircle cx='50' cy='14' r='4'/%3E%3Ccircle cx='64' cy='18' r='4'/%3E%3Ccircle cx='36' cy='82' r='4'/%3E%3Ccircle cx='50' cy='86' r='4'/%3E%3Ccircle cx='64' cy='82' r='4'/%3E%3Ccircle cx='18' cy='36' r='4'/%3E%3Ccircle cx='14' cy='50' r='4'/%3E%3Ccircle cx='18' cy='64' r='4'/%3E%3Ccircle cx='82' cy='36' r='4'/%3E%3Ccircle cx='86' cy='50' r='4'/%3E%3Ccircle cx='82' cy='64' r='4'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
 }
 .nav-hamburger {
   display: none;
@@ -832,6 +835,40 @@ body:has(.subnav) .nav {
   flex-wrap: wrap;
   gap: 12px;
 }
+
+/* --- CV DOWNLOAD BUTTON --- */
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 13px 22px;
+  border: 1px solid var(--c-accent);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-accent-light);
+  background: rgba(43, 60, 240, .08);
+  transition: background .25s ease, color .25s ease, transform .2s ease, box-shadow .25s ease;
+}
+.btn-cv::before {
+  content: '';
+  width: 15px; height: 15px;
+  flex: 0 0 auto;
+  background-color: currentColor;
+  /* download icon (tray + arrow) */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='7 10 12 15 17 10'/%3E%3Cline x1='12' y1='15' x2='12' y2='3'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='7 10 12 15 17 10'/%3E%3Cline x1='12' y1='15' x2='12' y2='3'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.btn-cv:hover {
+  background: var(--c-accent);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(43, 60, 240, .35);
+}
+.btn-cv:active { transform: translateY(0); }
 
 /* --- CASE STUDY (detail pages) --- */
 .study { position: relative; z-index: 1; max-width: var(--max-w-content); margin: 0 auto; padding: 104px var(--px); scroll-margin-top: 116px; }

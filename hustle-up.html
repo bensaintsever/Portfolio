@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hustle Up · Benjamin Saint-Sever</title>
+<meta name="description" content="Études de cas Hustle Up : workflow IA, design system multi-thème, redesign de header, dashboard gym owner.">
+<meta name="theme-color" content="#3bbf73">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="ptr-head-guard.js"></script>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- NAV (global, identique sur toutes les pages) -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">Benjamin Saint-Sever</a>
+    <span class="nav-location">TOULOUSE</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html#work">Travail</a>
+    <a href="index.html#method">Méthode</a>
+    <a href="index.html#about">À propos</a>
+    <a href="index.html#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#work">Travail</a>
+  <a href="index.html#method">Méthode</a>
+  <a href="index.html#about">À propos</a>
+  <a href="index.html#contact" class="nav-cta">Contact</a>
+</div>
+
+<!-- SUBNAV (ancres des études Hustle Up) -->
+<nav class="subnav" style="--accent:var(--c-green);">
+  <div class="subnav__inner">
+    <a href="#ia"><span class="subnav__num">01</span> Concevoir avec l'IA</a>
+    <a href="#ds"><span class="subnav__num">02</span> Design system</a>
+    <a href="#header"><span class="subnav__num">03</span> Header</a>
+    <a href="#dashboard"><span class="subnav__num">04</span> Dashboard</a>
+  </div>
+</nav>
+
+<!-- PROJECT INTRO -->
+<section class="study" style="padding-top:140px;">
+  <a href="index.html#work" class="study__back"><span class="c-green">‹</span> Retour aux projets</a>
+  <div data-reveal class="mono-label" style="margin-bottom:18px;"><span class="c-green">●</span>&nbsp;&nbsp;ÉTUDES DE CAS · 4 VOLETS</div>
+  <h1 data-reveal style="margin:0 0 18px; font-size:clamp(34px,6vw,72px); font-weight:600; letter-spacing:-.03em; line-height:1;">Hustle Up</h1>
+  <p data-reveal style="margin:0; max-width:720px; font-size:18px; line-height:1.55; color:var(--c-text-secondary);">Une plateforme sport &amp; bien-être pour trois publics (athlète, coach, owner). Quatre décisions de conception, chacune racontée par l'arbitrage qui l'a façonnée.</p>
+</section>
+
+<!-- ETUDE 01: CONCEVOIR AVEC L'IA -->
+<section id="ia" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">01</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Concevoir avec l'IA</h2>
+  <p data-reveal class="study__subtitle">Greffer un workflow de génération de maquettes sur le design system, sans lâcher la main.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Un workflow où l'IA génère des maquettes ancrées sur le design system existant (tokens + composants réels), pas "à vide". Résultat : production accélérée sans perte de cohérence, le designer garde l'arbitrage à chaque étape.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>Mise en place du workflow de conception assisté par IA</span></div>
+    <div class="study__meta-item"><label>Outils</label><span>Figma, Figma MCP, Claude Code, Claude Design (POC)</span></div>
+    <div class="study__meta-item"><label>Contexte</label><span>Sur la base du DS multi-public et multi-thème</span></div>
+    <div class="study__meta-item"><label>Période</label><span>fin 2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:21/9;">
+    <img src="assets/images/hustle-ia/workflow-v2-maturite.svg" alt="Diagramme du workflow de conception assisté par IA" style="object-fit:contain; background:#fff;" loading="lazy">
+    <span class="study__image-label">WORKFLOW IA ANCRÉ SUR LE DS</span>
+  </div>
+  <p data-reveal class="study__caption">Le workflow : un flux établi ancré sur le design system, et les outils par niveau de maturité.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Une fois le design system en place, restait la production. Le maquettage classique, écran par écran, est lent dès qu'un produit a plusieurs publics (athlète, coach, owner) et plusieurs thèmes à décliner. À l'inverse, demander à une IA de générer une interface « à vide » produit du générique : des écrans plausibles mais hors-système, qui ignorent les composants et les tokens. Aucune des deux ne donnait à la fois vitesse <strong>et</strong> cohérence.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <p>J'ai construit un workflow où l'IA ne part jamais de zéro : elle génère en s'appuyant sur le design system et sur la code base du produit.</p>
+    <ul class="study__list">
+      <li><strong>Le DS comme point d'ancrage</strong> : organisé en tokens sémantiques par thème, il fait produire des écrans réellement ancrés dans le système, pas des approximations à reprendre.</li>
+      <li><strong>Un process raffiné avec Claude Code</strong>, fidèle aux composants et tokens réels. L'IA propose, je raffine en designer, la maquette part en conception ; l'implémentation reste aux développeurs.</li>
+      <li><strong>L'entretien des fichiers Figma automatisé</strong> via le MCP Figma piloté par des scripts générés avec Claude : une tâche répétitive devient rapide et homogène.</li>
+      <li><strong>La main à chaque étape</strong> : je définis l'intention et les contraintes, l'IA accélère, je garde l'arbitrage et le contrôle qualité.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="poc-block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:12px;">CE QUE J'EXPLORE ENSUITE · POC</div>
+    <p>Je teste de générer des interfaces avec Claude Design, en y intégrant le design system calqué sur le repo pour s'appuyer sur les vrais composants. L'objectif reste constant (ne jamais générer hors-système), mais l'outillage évolue. Je le présente comme une exploration en cours, pas un acquis : distinguer l'établi de ce que je teste fait partie de ma façon de travailler.</p>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Ancrer la génération sur le design system plutôt que de prompter à vide</h3>
+    <p>Le réflexe courant, c'est de décrire un écran à l'IA et d'espérer un bon résultat. Le souci : il est déconnecté du système, il faut tout reprendre, et le gain de vitesse disparaît. J'ai fait le choix inverse : m'appuyer sur le DS déjà construit pour que l'IA génère <em>dedans, pas à côté</em>. Ce n'est possible que parce que le socle existait et était structuré en profondeur.</p>
+    <p>Le second parti pris, c'est la place du designer. L'IA n'est pas un substitut, c'est un exécutant rapide : le jugement (qu'est-ce qui est juste pour l'utilisateur, qu'est-ce qu'on garde) reste côté designer.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">UN OUTIL TESTÉ PUIS ÉCARTÉ</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Bridge, évalué puis abandonné</h3>
+    <p>J'ai évalué Bridge pour générer directement dans Figma. Après l'avoir mis à l'épreuve, je l'ai écarté : production et itération trop lentes, consommation de tokens trop élevée au regard du gain. Tester un outil et décider de ne pas le garder fait partie du travail.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>Le workflow accélère la production tout en préservant l'intention design et la cohérence avec le système. C'est une capacité que peu de designers savent démontrer concrètement : un process réel, pas une démo, ancré sur un DS de production et exploité au quotidien. La frontière reste nette : je conçois et génère des maquettes ancrées sur le système, l'implémentation revient aux développeurs.</p>
+  </div>
+
+</section>
+
+<!-- ETUDE 02: DESIGN SYSTEM -->
+<section id="ds" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">02</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Design system Hustle Up</h2>
+  <p data-reveal class="study__subtitle">Mettre en système un existant disparate pour tenir trois publics et plusieurs thèmes, sans le dupliquer.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Architecture de tokens sémantiques sur 4 thèmes (Athlete Light/Dark, Owner, Coach). Un composant ne référence jamais une couleur, seulement un rôle. Le même bouton change d'apparence selon le contexte sans duplication. Intégré avec les devs via Storybook.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>Conception, documentation et intégration avec les devs</span></div>
+    <div class="study__meta-item"><label>Outils</label><span>Figma (et Figma MCP), Storybook</span></div>
+    <div class="study__meta-item"><label>Période</label><span>fin 2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/hustle-ds/composants-introduction.png" alt="Anatomie d'un composant sur quatre thèmes" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    <span class="study__image-label">UN COMPOSANT · 4 THÈMES</span>
+  </div>
+  <p data-reveal class="study__caption">Anatomie d'un composant, déclinée sur les quatre thèmes.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Hustle Up s'adresse à trois publics (athlètes, owners, coachs), chacun avec son thème et son accent, en web comme en mobile, clair comme sombre. Le point de départ n'était pas une page blanche : des composants existaient, mais disparates, sans tokens, avec une gestion des couleurs incomplète. Le vrai enjeu : faire tenir <strong>une seule base</strong> sous tous ces contextes sans la dupliquer, en repartant d'un existant inégal.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <ul class="study__list">
+      <li><strong>Une architecture de tokens</strong> là où il n'y en avait aucun : couleurs globales à la base, puis une couche sémantique (interactive, surface, feedback) qui décrit l'intention, pas la valeur.</li>
+      <li><strong>Repris les composants existants</strong> pour lever les disparités et compléter la gestion des couleurs, de sorte que tout se range derrière les mêmes tokens.</li>
+      <li><strong>Décliné sur quatre thèmes</strong> (Athlete Light, Athlete Dark, Owner, Coach) : le même token pointe vers une valeur différente selon le thème, sans toucher au composant.</li>
+      <li><strong>Documenté dans Storybook</strong> et intégré avec les devs via un système de tokens commun design ↔ code : pas de traduction manuelle, pas d'écart entre maquette et produit.</li>
+    </ul>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/9;">
+      <img src="assets/images/hustle-ds/tokens-themes.png" alt="Architecture des tokens sémantiques par thème" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    </div>
+    <figcaption class="study__caption">Les tokens sémantiques, déclinés thème par thème.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Une couche sémantique de tokens plutôt que des couleurs directes</h3>
+    <p>Le choix simple aurait été d'attribuer des couleurs directement aux composants, thème par thème. Ça marche au début, et ça devient ingérable dès qu'on ajoute un public ou un mode sombre. J'ai inséré une couche sémantique entre les couleurs globales et les composants : un bouton ne dit pas « je suis violet », il dit <em>« j'utilise la couleur interactive primaire »</em>, et c'est le thème qui décide.</p>
+    <p>Ce niveau d'indirection coûte plus de travail en amont, mais c'est exactement ce qui rend le système multi-public tenable, et ce qui a rendu possible le branchement d'un workflow assisté par IA.</p>
+  </div>
+
+  <div data-reveal style="margin:8px 0 44px;">
+    <div class="mono-label--sm" style="margin-bottom:20px;">LE PÉRIMÈTRE COUVERT</div>
+    <div class="gallery">
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/suivi-coach.png" alt="Suivi coach" loading="lazy">
+        <p class="gallery__caption">Suivi individuel coach</p>
+        <p class="gallery__desc">Objectifs, cycles, blessures, événements et records avec leur progression.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/chrono-bpm.png" alt="Chrono BPM" loading="lazy">
+        <p class="gallery__caption">Chrono &amp; suivi BPM</p>
+        <p class="gallery__desc">Suivi de fréquence cardiaque dans l'app chrono, courbe et moyennes.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/social-cards.png" alt="Espace social" loading="lazy">
+        <p class="gallery__caption">Espace social</p>
+        <p class="gallery__desc">Échange autour d'une séance, cartes déclinées sur tous leurs états.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/box-athlete.png" alt="Box CrossFit" loading="lazy">
+        <p class="gallery__caption">Section box CrossFit</p>
+        <p class="gallery__desc">Vue athlète : infos, réservation de créneaux, contact coachs, boutique.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/vitrine-coach.png" alt="Vitrine coach" loading="lazy">
+        <p class="gallery__caption">Vitrine coach</p>
+        <p class="gallery__desc">Mise en avant des coachs pour vendre formations et suivi.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>Hustle Up dispose d'un design system qui tient ses trois publics et ses thèmes sur une seule base, où ajouter un univers ne casse pas les composants. Surtout, il vit jusque dans le produit grâce aux tokens communs design ↔ code et à l'intégration menée avec les devs sur Storybook. Et c'est ce même socle qui a permis ensuite de greffer le workflow assisté par IA.</p>
+  </div>
+
+</section>
+
+<!-- ETUDE 03: REDESIGN DU HEADER -->
+<section id="header" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">03</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Redesign du header de programmation</h2>
+  <p data-reveal class="study__subtitle">Remettre la lecture d'une page dense dans le bon sens.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Le header de programmation avait le titre au centre, une zone contrastée qui court-circuitait le regard, et deux contrôles de visualisation dispersés. Repris en partant du parcours de l'œil, devenu un pattern réutilisé sur les vues coach.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>UI/UX designer</span></div>
+    <div class="study__meta-item"><label>Contexte</label><span>Vue de programmation des séances</span></div>
+    <div class="study__meta-item"><label>Réemploi</label><span>Repris sur les vues de planification des coachs</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/9;">
+    <img src="assets/images/hustle-features/header-parcours-oeil.png" alt="Parcours de l'œil sur l'ancien header" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">PARCOURS DE L'ŒIL</span>
+  </div>
+  <p data-reveal class="study__caption">L'ancien header : happé par la zone contrastée du centre, le regard zigzague au lieu de suivre la lecture.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p style="margin-bottom:4px;">Le header de la vue de programmation accumulait trop d'éléments, et sa structure gênait la lecture. Trois problèmes se cumulaient :</p>
+    <ul class="study__list">
+      <li>Le regard parcourt la page de gauche à droite, or <strong>le titre du programme était relégué au centre</strong>, perdu au milieu plutôt qu'en tête.</li>
+      <li>Une <strong>zone à fort contraste en plein milieu</strong> court-circuitait la lecture naturelle.</li>
+      <li>Deux endroits servaient à changer la visualisation : la date à gauche, la densité à droite via un switch, un composant peu cohérent pour basculer entre deux modes.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <p>Plutôt que de réarranger l'existant à la marge, j'ai repris le header en partant du parcours de l'œil : le titre revient en tête, la zone à fort contraste est apaisée, et le contrôle de la visualisation est rendu cohérent au lieu d'être dispersé entre une date et un switch.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/9;">
+      <img src="assets/images/hustle-features/header-apres.png" alt="Nouveau header de programmation" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    </div>
+    <figcaption class="study__caption">Après : le titre en tête, un contraste calmé, et un contrôle de visualisation regroupé.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Faire suivre au header le sens de lecture de la page</h3>
+    <p>Sur une page dense, un header n'est pas une barre d'outils à remplir, c'est <em>ce qui donne le point d'entrée du regard</em>. Le titre du programme revient là où l'œil se pose d'abord, la zone contrastée cesse d'interrompre la lecture, et choisir comment on voit la semaine devient une seule logique au lieu de deux. Il doit suivre le sens de lecture, pas le contrarier.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>Le header guide désormais la lecture au lieu de la freiner. La cohérence gagnée en a fait une base réutilisable : il a été repris tel quel sur les nouvelles vues de planification des coachs, évitant de réinventer un en-tête à chaque vue.</p>
+  </div>
+
+</section>
+
+<!-- ETUDE 04: DASHBOARD GYM OWNER -->
+<section id="dashboard" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">04</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Dashboard gym owner</h2>
+  <p data-reveal class="study__subtitle">Centraliser le pilotage quotidien d'une salle, avec des accès adaptés à chaque rôle.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Interviews owners → vue de pilotage unique répondant à "où dois-je agir aujourd'hui ?" Chaque bloc = une porte d'entrée vers le détail, pas le détail lui-même. Finance segmentée par rôle. Retours positifs ; un widget non utilisé retiré post-launch.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>DS, recherche utilisateur, conception de la vue</span></div>
+    <div class="study__meta-item"><label>Équipe</label><span>1 PO, et le CEO sur quelques retours</span></div>
+    <div class="study__meta-item"><label>Outils</label><span>Figma (et Figma MCP)</span></div>
+    <div class="study__meta-item"><label>Période</label><span>fin 2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/hustle-dashboard/dashboard-owner.png" alt="Vue principale du dashboard gym owner" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">DASHBOARD OWNER</span>
+  </div>
+  <p data-reveal class="study__caption">La vue de pilotage de l'owner, dense mais lisible.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Après des interviews d'owners, un constat : pour piloter leur salle au quotidien, il leur faut des informations centralisées qu'ils n'avaient pas, ou seulement distillées dans plusieurs endroits du produit : présences, remplissage des cours, engagement, et l'aspect financier. Le problème n'était pas un manque de données, mais <strong>leur dispersion</strong>. Aucun endroit ne répondait à la question du matin : ma salle tourne-t-elle bien aujourd'hui, et où dois-je agir ?</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <ul class="study__list">
+      <li><strong>Identifié en interview</strong> les informations qui comptent pour le suivi quotidien et regroupé le besoin sur une seule vue : drop-in du jour, sessions d'essai, cours qui se remplissent, engagement, et une section KPI.</li>
+      <li><strong>Centralisé en colonnes thématiques</strong> sur le thème owner. Chaque bloc est une synthèse, une tendance, un chiffre clé, pas un tableau exhaustif.</li>
+      <li><strong>Tenu compte des rôles</strong> dès la conception : la finance (à gauche) relève du rôle financial ; les infos athlètes restent accessibles au coach, sans droit de regard sur la finance.</li>
+      <li><strong>Réutilisé le modèle de tableau unifié</strong> du DS pour les pages de détail (finances, planning, membres) : filtres, recherche, export. Le dashboard y renvoie quand l'owner veut creuser.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Une vue de pilotage, pas un tableau de bord exhaustif</h3>
+    <p>La tentation, sur un dashboard, c'est de tout mettre (chaque athlète, chaque transaction) parce que tout existe déjà. J'ai tranché dans l'autre sens : le dashboard ne montre que ce qui aide à <em>décider</em>. Chaque bloc est une porte d'entrée vers un détail, pas le détail lui-même : on voit le churn et les quelques athlètes à relancer, un lien mène à la liste complète.</p>
+    <p>Sur une interface de pilotage, la valeur n'est pas dans la quantité affichée mais dans la décision qu'elle déclenche. Le détail doit rester à un clic, pas sous les yeux.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">EN COMPLÉMENT</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Des accès adaptés au rôle</h3>
+    <p>Une même salle, plusieurs droits de regard. Plutôt que de multiplier les écrans, la même vue se module selon le rôle : le financial retrouve la même structure avec les blocs financiers en moins, réagencés pour rester lisibles. Chacun voit ce qui le concerne, l'information sensible reste cadrée par les droits.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>L'owner dispose d'une vue unique qui centralise un suivi jusque-là dispersé et répond à « où dois-je agir aujourd'hui ? ». Les retours utilisateurs ont été bons. Un arbitrage de suivi dit la méthode : une feature de prise de notes, appréciée sur prototype mais peu utilisée en réel, n'a pas été maintenue : la garder aurait alourdi la vue sans servir la décision.</p>
+  </div>
+
+  <a href="index.html#work" class="study-next">
+    <span class="study-next__label">RETOUR</span>
+    <span style="display:flex; align-items:center; gap:14px;"><span class="study-next__title">Voir tous les projets</span><span class="study-next__arrow">→</span></span>
+  </a>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script>
+(function(){
+  // Mobile nav toggle
+  var hamburger=document.querySelector('.nav-hamburger');
+  var mobileNav=document.getElementById('nav-mobile');
+  if(hamburger&&mobileNav){
+    hamburger.addEventListener('click',function(){
+      var open=mobileNav.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click',function(){
+        mobileNav.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  // Cursor
+  var cursor=document.getElementById('cursor');
+  var cx=0,cy=0,mx=0,my=0;
+  window.addEventListener('mousemove',function(e){ mx=e.clientX; my=e.clientY; });
+  function loop(){ requestAnimationFrame(loop); cx+=(mx-cx)*.2; cy+=(my-cy)*.2; if(cursor){cursor.style.left=cx+'px'; cursor.style.top=cy+'px';} }
+  loop();
+  document.addEventListener('mouseover',function(e){ if(e.target.closest('a,button')&&cursor){ cursor.style.width='52px'; cursor.style.height='52px'; cursor.style.background='rgba(91,108,255,.18)'; }});
+  document.addEventListener('mouseout',function(e){ if(e.target.closest('a,button')&&cursor){ cursor.style.width='28px'; cursor.style.height='28px'; cursor.style.background='transparent'; }});
+
+  // GSAP reveals
+  function waitFor(cond,cb){ if(cond()){cb();return;} var n=0,t=setInterval(function(){if(cond()){clearInterval(t);cb();}else if(++n>200)clearInterval(t);},50); }
+  waitFor(function(){ return window.gsap&&window.ScrollTrigger; },function(){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      gsap.from(el,{y:40,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',toggleActions:'play none none none'}});
+    });
+  });
+})();
+</script>
+<script src="transition.js" defer></script>
+<script src="study-extras.js" defer></script>
+</body>
+</html>

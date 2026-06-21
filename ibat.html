@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISYBUY &amp; IBAT · Benjamin Saint-Sever</title>
+<meta name="description" content="Études de cas ISYBUY et IBAT : plateforme d'achat SaaS, scan de devis, application mobile terrain, gestion des temps sur chantier.">
+<meta name="theme-color" content="#e0913b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="ptr-head-guard.js"></script>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- NAV (global, identique sur toutes les pages) -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">Benjamin Saint-Sever</a>
+    <span class="nav-location">TOULOUSE</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html#work">Travail</a>
+    <a href="index.html#method">Méthode</a>
+    <a href="index.html#about">À propos</a>
+    <a href="index.html#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#work">Travail</a>
+  <a href="index.html#method">Méthode</a>
+  <a href="index.html#about">À propos</a>
+  <a href="index.html#contact" class="nav-cta">Contact</a>
+</div>
+
+<!-- SUBNAV (ancres des études ISYBUY & IBAT) -->
+<nav class="subnav" style="--accent:var(--c-orange);">
+  <div class="subnav__inner">
+    <a href="#isybuy"><span class="subnav__num">05</span> Plateforme d'achat web</a>
+    <a href="#scan"><span class="subnav__num">06</span> Scan de devis</a>
+    <a href="#achat"><span class="subnav__num">07</span> Achat mobile</a>
+    <a href="#temps"><span class="subnav__num">08</span> Gestion des temps</a>
+  </div>
+</nav>
+
+<!-- ISYBUY INTRO -->
+<section class="study" style="padding-top:140px;" id="isybuy">
+  <a href="index.html#work" class="study__back"><span class="c-orange">‹</span> Retour aux projets</a>
+  <div data-reveal class="mono-label" style="margin-bottom:18px;"><span class="c-orange">●</span>&nbsp;&nbsp;ISYBUY · 2022–2024</div>
+  <h1 data-reveal style="margin:0 0 18px; font-size:clamp(34px,6vw,72px); font-weight:600; letter-spacing:-.03em; line-height:1;">Plateforme d'achat SaaS (ISYBUY)</h1>
+  <p data-reveal style="margin:0 0 40px; max-width:720px; font-size:18px; line-height:1.55; color:var(--c-text-secondary);">Décliner un produit cœur en marque blanche, avec un design system et des décisions pilotées par la preuve.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">ISYBUY décline le socle d'IBAT Achat pour les achats en entreprise hors BTP, vendu en marque blanche. J'ai piloté un design system de règles génériques (tableaux, formulaires, navigation refondue) pour qu'un socle unique accueille tous les clients sans sur-mesure, plus des vues de sourcing propres au pilotage du panel fournisseurs.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>Pilote du design system, recherche utilisateur</span></div>
+    <div class="study__meta-item"><label>Équipe</label><span>1 PO, 1 PM, 8 développeurs</span></div>
+    <div class="study__meta-item"><label>Outils</label><span>Figma, Adobe XD</span></div>
+    <div class="study__meta-item"><label>Période</label><span>2022–2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-web/isybuy-accueil-dashboard.png" alt="Écran d'accueil de la plateforme ISYBUY" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    <span class="study__image-label">ACCUEIL ISYBUY</span>
+  </div>
+  <p data-reveal class="study__caption">L'accueil ISYBUY, la plateforme d'achat déclinée pour l'entreprise.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CONTEXTE</div>
+    <p>ISYBUY est une plateforme SaaS de commande fournisseurs, gestion de catalogues et traçabilité. Elle est entièrement bâtie sur le code d'IBAT Achat, l'outil pensé pour le BTP : le même socle produit, décliné cette fois pour les achats en entreprise hors BTP et vendu en marque blanche. Mon rôle était de piloter le design system et de mener la recherche utilisateur sur ce produit web, au sein d'une équipe de 1 PO, 1 PM et 8 développeurs.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Le produit cœur s'était construit au fil des besoins, sans méthode structurante. Résultat : des outils pourtant similaires, comme les tableaux et les formulaires, fonctionnaient différemment d'un écran à l'autre, et la navigation, accumulée en blocs, était devenue confuse pour les utilisateurs comme en interne. Décliner ce socle en marque blanche pour un nouveau marché rendait cette mise en cohérence d'autant plus nécessaire.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <ul class="study__list">
+      <li><strong>Recensé les types de vues récurrents</strong> et établi un design system de règles génériques documentées : formulaires en colonne unique à séquence logique, et un modèle de tableau unifié (filtres ajoutables sans limite, recherche, personnalisation des colonnes, export Excel, PDF et image, pagination).</li>
+      <li><strong>Refondu la navigation</strong>, d'une accumulation de blocs vers un panneau latéral et un bandeau fixe, après plusieurs itérations et une réflexion de fond destinée à servir de base aux produits futurs.</li>
+      <li><strong>Adapté ce système à la déclinaison en marque blanche</strong>, pour que chaque client retrouve une base cohérente sous sa propre identité.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="gallery" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+    <figure class="gallery__item" style="margin:0;">
+      <img src="assets/images/ibat-web/isybuy-nav-avant.png" alt="Ancienne navigation ISYBUY accumulée en blocs" style="aspect-ratio:16/10; background:#f4f4f2;" loading="lazy">
+      <p class="gallery__caption">Avant</p>
+      <p class="gallery__desc">La navigation accumulée en blocs, devenue confuse.</p>
+    </figure>
+    <figure class="gallery__item" style="margin:0;">
+      <img src="assets/images/ibat-web/isybuy-admin-navigation.png" alt="Navigation refondue ISYBUY : panneau latéral et bandeau fixe" style="aspect-ratio:16/10; background:#f4f4f2;" loading="lazy">
+      <p class="gallery__caption">Après</p>
+      <p class="gallery__desc">Panneau latéral et bandeau fixe, pensés pour durer.</p>
+    </figure>
+  </div>
+
+  <div data-reveal class="arbitrage" style="border-left-color:var(--c-orange);">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Un seul socle pour tous les clients</h3>
+    <p>Vendre le produit en marque blanche rendait tentant d'adapter chaque écran à chaque client, au cas par cas. Le problème, c'est qu'à mesure que les clients s'ajoutent, ce sur-mesure devient impossible à maintenir. J'ai posé l'approche inverse : un design system de règles génériques, des modèles de tableau, de formulaire et de navigation valables partout, sur lesquels l'identité de chaque client vient se poser sans toucher à la structure. La cohérence vient du système, pas d'un travail répété écran par écran.</p>
+    <p>Ce choix demande plus d'effort au départ, mais c'est lui qui rend la marque blanche tenable : un socle unique à maintenir, des déclinaisons clientes qui ne le fragilisent pas, et une base réutilisable au-delà de ce seul produit.</p>
+    <p style="color:var(--c-text); margin-top:14px;"><strong>Le principe que je retiens :</strong> pour décliner un produit chez plusieurs clients, mieux vaut un socle assez générique pour les accueillir tous que des adaptations cas par cas qui finissent par s'empiler.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LA SPÉCIFICITÉ ISYBUY</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Des features de sourcing</h3>
+    <p>Décliner le produit pour l'entreprise hors BTP, ce n'était pas qu'un changement d'habillage. ISYBUY a reçu des features propres au sourcing achats, absentes de la version BTP : l'évaluation des fournisseurs sous l'angle du risque et de la criticité, le suivi RSE, et les plans d'actions associés. Ces vues sont denses en données et conçues pour aider une direction achats à décider où concentrer son attention. C'est aussi ce qui donnait sa valeur à la déclinaison en marque blanche, en offrant à chaque client un outil de pilotage du panel fournisseurs.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/ibat-web/isybuy-risque-fournisseur.png" alt="Vue de sourcing ISYBUY : risques, criticité et plans d'actions fournisseur" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    </div>
+    <figcaption class="study__caption">Une vue de sourcing propre à ISYBUY : risque, criticité et plans d'actions fournisseur.</figcaption>
+  </figure>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">EN COMPLÉMENT</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">La lisibilité des tableaux</h3>
+    <p>Un exemple de la rigueur appliquée au design system : pour les colonnes de tableau, j'ai aligné le contenu selon sa nature (texte à gauche, montants à droite) et placé le tri à l'opposé de cet alignement. Ce parti pris préserve la lisibilité en évitant que l'élément de tri ne se confonde avec la lecture de la colonne.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/ibat-web/isybuy-commande-tableau.png" alt="Modèle de tableau unifié ISYBUY sur une commande : colonnes, alignements et totaux" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    </div>
+    <figcaption class="study__caption">Le modèle de tableau unifié, ici sur une commande.</figcaption>
+  </figure>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>ISYBUY a permis de porter le produit cœur vers un nouveau marché, l'achat en entreprise hors BTP, sans repartir de zéro : le même socle, décliné en marque blanche, enrichi de vues de sourcing propres à ce public. Le design system a unifié les vues récurrentes et donné une base de navigation pensée pour durer au-delà de ce seul produit, ce qui était précisément la condition pour qu'une déclinaison multi-clients reste maintenable.</p>
+  </div>
+
+</section>
+
+<!-- SCAN DE DEVIS -->
+<section id="scan" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-red">06</span>
+    <span class="mono-label">IBAT</span>
+  </div>
+  <h2 data-reveal class="study__title">Scan de devis, du papier au panier</h2>
+  <p data-reveal class="study__subtitle">Une décision de conception tranchée par un test utilisateur, pas à l'instinct.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Débat interne sans consensus : héberger le scan dans la page du panier ou dans une modale dédiée ? J'ai prototypé les deux versions et les ai comparées en test à distance (questionnaire SUS). La modale a gagné car elle isole la tâche critique. Décision tranchée par la preuve.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>UX/UI designer, recherche utilisateur</span></div>
+    <div class="study__meta-item"><label>Méthode</label><span>Prototypage des deux versions, test à distance, questionnaire SUS</span></div>
+    <div class="study__meta-item"><label>Outils</label><span>Adobe XD, Figma</span></div>
+    <div class="study__meta-item"><label>Période</label><span>2018–2022</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-scan/scan-modale-retenue.png" alt="Modale de scan de devis retenue" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">MODALE RETENUE APRÈS TEST</span>
+  </div>
+  <p data-reveal class="study__caption">La version en modale, retenue après comparaison en test utilisateur.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CONTEXTE</div>
+    <p>Sur la plateforme web IBAT Achat, une feature permet de transformer un devis fournisseur en panier de commande directement à partir de son scan. C'est une tâche clé du parcours d'achat, mais aussi une tâche dense : il faut reconnaître les articles, vérifier les quantités et les prix, puis valider. La question de conception était de savoir où l'héberger dans l'interface.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Deux intégrations s'opposaient, et le débat était interne, sans consensus évident. Fallait-il héberger le scan directement dans la page du panier, au plus près du contexte de commande, ou l'isoler dans une modale dédiée ? Chaque camp avait ses arguments, et trancher à l'instinct risquait d'imposer une intuition plutôt qu'une réponse.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/ibat-scan/scan-panier-teste.png" alt="Version intégrée à la page du panier, testée puis écartée" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    </div>
+    <figcaption class="study__caption">La version intégrée à la page du panier, testée puis écartée : la tâche se diluait au milieu de trop d'éléments.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage" style="border-left-color:var(--c-red);">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Isoler la tâche critique dans une modale</h3>
+    <p>Plutôt que de trancher à l'instinct, j'ai prototypé les deux versions sous Adobe XD et Figma, puis les ai comparées à distance sur deux groupes d'utilisateurs avec un questionnaire SUS. Intégrée à la page du panier, la tâche se diluait au milieu de trop d'éléments et les utilisateurs avaient du mal à l'accomplir. La modale l'a emporté précisément parce qu'elle isolait l'action et focalisait l'attention sur la seule chose à faire. J'ai donc abandonné l'intégration en page au profit de la modale, plus claire et plus efficace.</p>
+    <p style="color:var(--c-text); margin-top:14px;"><strong>Le principe que je retiens :</strong> une tâche critique gagne à être isolée de son contexte quand l'environnement est dense.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>Le parcours retenu a été validé directement par les utilisateurs en test plutôt que choisi à l'instinct, ce qui a tranché un débat interne par la preuve. Les retours de satisfaction sur la solution étaient positifs. C'est l'exemple le plus net, dans mon travail sur IBAT, d'une décision de conception arbitrée par une comparaison mesurée plutôt que par une opinion.</p>
+  </div>
+
+</section>
+
+<!-- ACHAT MOBILE -->
+<section id="achat" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-red">07</span>
+    <span class="mono-label">IBAT</span>
+  </div>
+  <h2 data-reveal class="study__title">Achat mobile</h2>
+  <p data-reveal class="study__subtitle">Commander chez les fournisseurs depuis le chantier, même sans réseau.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">App de commande terrain conçue autour du mode déconnecté : préparer une commande sans réseau, synchroniser au retour. Second arbitrage : permettre la saisie d'achats faits sur place pour ne pas forcer un flux unique.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>UX/UI designer, recherche utilisateur</span></div>
+    <div class="study__meta-item"><label>Personas</label><span>Conducteur de travaux, chef de chantier</span></div>
+    <div class="study__meta-item"><label>Outils</label><span>Adobe XD, Figma</span></div>
+    <div class="study__meta-item"><label>Période</label><span>2018–2022</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-achat/ibat-achat-app.png" alt="Application IBAT Achat" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">APP IBAT ACHAT</span>
+  </div>
+  <p data-reveal class="study__caption">Écrans de commande et scan de document.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Avant l'application, la commande passait par téléphone, via un commercial. Le process était lent, générait de la paperasse, et n'offrait aucune traçabilité. Sur le terrain s'ajoutait une contrainte concrète : le réseau mobile est souvent faible ou absent sur un chantier, et les habitudes d'achat ne passent pas toujours par un flux numérique propre.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <ul class="study__list">
+      <li><strong>Mené la recherche utilisateur</strong> (personas, user journey) pour comprendre comment se passe réellement une commande sur le terrain.</li>
+      <li><strong>Conçu les wireframes puis un storyboard haute-fidélité</strong> : passage de commande, suivi, et un scan de document pour capturer un devis ou un bon directement depuis le téléphone.</li>
+      <li><strong>Décliné dans l'UI kit IBAT</strong> pour rester cohérent avec le reste de la suite.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Concevoir pour le chantier sans réseau, pas pour le bureau connecté</h3>
+    <p>La façon simple de concevoir une application de commande, c'est de supposer une connexion permanente. Sur un chantier, cette hypothèse tombe. J'ai fait le choix de concevoir autour du mode déconnecté : préparer et saisir une commande sans réseau, puis synchroniser une fois la connexion revenue.</p>
+    <p>C'est une contrainte structurante qui change la conception : penser les états intermédiaires, ce qui est enregistré localement, ce qui se synchronise, et comment l'utilisateur sait où il en est. Ce parti pris vient directement du terrain observé en recherche, pas d'une préférence technique.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">EN COMPLÉMENT</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Respecter les habitudes d'achat sur place</h3>
+    <p>Tout ne passe pas par une commande anticipée. Il arrive qu'un achat soit fait directement en point de vente. Plutôt que de forcer un flux unique, l'application permet de saisir a posteriori un achat réalisé sur place, pour que la traçabilité reste complète sans contraindre les habitudes terrain.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>L'application a remplacé la commande par téléphone et la paperasse par un parcours traçable, utilisable depuis le chantier y compris sans réseau. Le scan de document a simplifié la capture d'un devis ou d'un bon sans ressaisie.</p>
+  </div>
+
+</section>
+
+<!-- GESTION DES TEMPS -->
+<section id="temps" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-red">08</span>
+    <span class="mono-label">IBAT</span>
+  </div>
+  <h2 data-reveal class="study__title">Gestion des temps sur chantier</h2>
+  <p data-reveal class="study__subtitle">Suivre les heures des équipes sans re-saisie, du terrain au bureau.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Remplacement du papier-crayon par une saisie unique au plus près du terrain. Arbitrage clé : concilier densité d'information (vue semaine) et manipulation directe (édition dans la cellule) dans la même grille. V2 retravaillée après tests utilisateurs.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>UX/UI designer, recherche utilisateur</span></div>
+    <div class="study__meta-item"><label>Personas</label><span>Chef d'équipe, conducteur de travaux, RH</span></div>
+    <div class="study__meta-item"><label>Outils</label><span>Adobe XD, Figma</span></div>
+    <div class="study__meta-item"><label>Période</label><span>2018–2022</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-temps/ibat-temps-app.png" alt="Application IBAT Temps" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">IBAT TEMPS</span>
+  </div>
+  <p data-reveal class="study__caption">La grille hebdomadaire : saisie directe dans la cellule.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Le suivi des heures se faisait au papier-crayon, avec re-saisie ultérieure et aucune centralisation. Les heures notées sur le terrain étaient ressaisies plus tard, source d'erreurs et de perte de temps, et personne n'avait de vue consolidée fiable.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <ul class="study__list">
+      <li><strong>Mené la recherche utilisateur</strong> (personas, user journey) pour cartographier qui saisit quoi, quand, et ce que chaque profil attend de l'outil.</li>
+      <li><strong>Conçu les wireframes puis un storyboard haute-fidélité</strong> couvrant le pointage, la saisie des heures et des absences, l'ajout d'heures locatives, et la consultation du planning.</li>
+      <li><strong>Produit une seconde version</strong> améliorée par les tests utilisateurs, en corrigeant ce qui posait problème sur la première.</li>
+    </ul>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/9;">
+      <img src="assets/images/ibat-temps/ibat-temps-storyboard.png" alt="Storyboard du parcours de pointage" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    </div>
+    <figcaption class="study__caption">Storyboard du parcours de pointage et de saisie.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Tout voir d'un coup d'œil, sans renoncer à éditer vite</h3>
+    <p>Le suivi des heures pose un dilemme classique des interfaces data-rich : pour décider, il faut une vue d'ensemble dense ; mais pour saisir vite sur le terrain, il faut pouvoir éditer directement. Densité et manipulation directe tirent en sens opposés.</p>
+    <p>J'ai conçu la vue pour concilier les deux : une grille qui montre la semaine entière d'un seul tenant, où la saisie et la correction se font directement dans la cellule, là où l'œil est déjà posé, sans ouvrir un formulaire à part. La manipulation directe se fait <em>dans</em> la densité, pas à côté d'elle.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>L'application a remplacé le papier-crayon et la re-saisie par une capture unique au plus près du terrain, exploitable ensuite par les RH sans double saisie. La seconde version, retravaillée à partir des tests, a corrigé les points de friction de la première.</p>
+  </div>
+
+  <a href="index.html#work" class="study-next">
+    <span class="study-next__label">RETOUR</span>
+    <span style="display:flex; align-items:center; gap:14px;"><span class="study-next__title">Voir tous les projets</span><span class="study-next__arrow">→</span></span>
+  </a>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script>
+(function(){
+  var hamburger=document.querySelector('.nav-hamburger');
+  var mobileNav=document.getElementById('nav-mobile');
+  if(hamburger&&mobileNav){
+    hamburger.addEventListener('click',function(){
+      var open=mobileNav.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click',function(){ mobileNav.classList.remove('is-open'); hamburger.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  var cursor=document.getElementById('cursor');
+  var cx=0,cy=0,mx=0,my=0;
+  window.addEventListener('mousemove',function(e){ mx=e.clientX; my=e.clientY; });
+  function loop(){ requestAnimationFrame(loop); cx+=(mx-cx)*.2; cy+=(my-cy)*.2; if(cursor){cursor.style.left=cx+'px'; cursor.style.top=cy+'px';} }
+  loop();
+  document.addEventListener('mouseover',function(e){ if(e.target.closest('a,button')&&cursor){ cursor.style.width='52px'; cursor.style.height='52px'; cursor.style.background='rgba(91,108,255,.18)'; }});
+  document.addEventListener('mouseout',function(e){ if(e.target.closest('a,button')&&cursor){ cursor.style.width='28px'; cursor.style.height='28px'; cursor.style.background='transparent'; }});
+
+  function waitFor(cond,cb){ if(cond()){cb();return;} var n=0,t=setInterval(function(){if(cond()){clearInterval(t);cb();}else if(++n>200)clearInterval(t);},50); }
+  waitFor(function(){ return window.gsap&&window.ScrollTrigger; },function(){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      gsap.from(el,{y:40,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',toggleActions:'play none none none'}});
+    });
+  });
+})();
+</script>
+<script src="transition.js" defer></script>
+<script src="study-extras.js" defer></script>
+</body>
+</html>

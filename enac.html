@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulateur de vol · Benjamin Saint-Sever</title>
+<meta name="description" content="Étude de cas : poste de supervision pour simulateur de vol, conçu pour les instructeurs de l'ENAC. Design d'interaction sur interface critique.">
+<meta name="theme-color" content="#9a7cff">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="ptr-head-guard.js"></script>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index.html" class="nav-logo">Benjamin Saint-Sever</a>
+    <span class="nav-location">TOULOUSE</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html#work">Travail</a>
+    <a href="index.html#method">Méthode</a>
+    <a href="index.html#about">À propos</a>
+    <a href="index.html#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html#work">Travail</a>
+  <a href="index.html#method">Méthode</a>
+  <a href="index.html#about">À propos</a>
+  <a href="index.html#contact" class="nav-cta">Contact</a>
+</div>
+
+<!-- ETUDE: SIMULATEUR DE VOL -->
+<section class="study" style="padding-top:140px;">
+  <a href="index.html#work" class="study__back"><span class="c-purple">‹</span> Retour aux projets</a>
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-purple">09</span>
+    <span class="mono-label">ENAC · MASTER 2 IHM</span>
+  </div>
+  <h1 data-reveal class="study__title">Poste de supervision pour simulateur de vol</h1>
+  <p data-reveal class="study__subtitle">Donner aux instructeurs un contexte aérien réaliste, pensé pour des non-experts.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Conception d'un poste de supervision pour instructeurs de pilotage (ENAC). Arbitrage principal : une timeline horizontale compacte pour suivre les événements ATC sans voler d'espace à la vue radar. Second arbitrage : réutiliser le Navigation Display connu des instructeurs plutôt qu'inventer un mode d'interaction.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Rôle</label><span>Responsable technique, conception centrée utilisateur (équipe de 4)</span></div>
+    <div class="study__meta-item"><label>Cadre</label><span>Chef d'œuvre, Master 2 IHM, Université Paul Sabatier &amp; ENAC</span></div>
+    <div class="study__meta-item"><label>Client</label><span>ENAC (formation des pilotes)</span></div>
+    <div class="study__meta-item"><label>Domaine</label><span>Aéronautique, contrôle aérien, synthèse vocale</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/9;">
+    <img src="assets/images/simu/simu-poster.jpg" alt="Poster de synthèse du projet" style="object-fit:cover;" loading="lazy">
+    <span class="study__image-label">POSTER DE SYNTHÈSE</span>
+  </div>
+  <p data-reveal class="study__caption">Le poster du chef d'œuvre, synthèse du projet présenté à l'ENAC.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
+    <p>Les simulateurs de pilotage n'offraient aucun contexte aérien : les communications avec le contrôle et les échanges entre le contrôle et les autres avions du secteur étaient absents. Les pilotes ne les découvraient qu'en vol réel. L'enjeu était d'ajouter ce contexte (des messages ATC réalistes et un environnement vocal) tout en gardant l'outil utilisable par un instructeur qui mène déjà la séance, et sans supposer qu'il maîtrise la phraséologie aéronautique.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CE QUE J'AI FAIT</div>
+    <p>Une démarche centrée utilisateur en deux itérations, ancrée dans le terrain et l'état de l'art.</p>
+    <ul class="study__list">
+      <li><strong>Observé deux séances réelles</strong> avec un instructeur de la DFPV, d'une situation simple à une simulation chargée de fin de cycle.</li>
+      <li><strong>Analysé l'état de l'art</strong>, dont l'IIPP (Interface Innovante de Pseudo-Pilotage) conçue par la recherche de l'ENAC. Nous l'avons étudiée pour situer ce qui manquait, sans la reprendre : notre utilisateur et notre besoin étaient différents.</li>
+      <li><strong>Formalisé les besoins</strong> à partir d'un scénario réel de remise de gaz, puis prototypé en basse fidélité plusieurs représentations, confrontées aux clients, avant d'aboutir aux maquettes haute-fidélité.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="gallery" style="margin-bottom:44px;">
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-phases-controle.png" alt="Phases du contrôle aérien" loading="lazy">
+      <p class="gallery__caption">Phases du contrôle</p>
+      <p class="gallery__desc">Étude amont des phases du contrôle aérien.</p>
+    </div>
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-maquette-papier.png" alt="Maquettes papier" loading="lazy">
+      <p class="gallery__caption">Prototypes papier</p>
+      <p class="gallery__desc">Timeline circulaire vs. horizontale, confrontées aux clients.</p>
+    </div>
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-maquette-nd.png" alt="Maquette haute-fidélité ND" loading="lazy">
+      <p class="gallery__caption">Vue Navigation Display</p>
+      <p class="gallery__desc">Manipulation directe des avions via le ND connu des instructeurs.</p>
+    </div>
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-maquette-carte.png" alt="Maquette vue carte" loading="lazy">
+      <p class="gallery__caption">Vue carte centrée avion</p>
+      <p class="gallery__desc">Vue d'ensemble du trafic avec la timeline en bas.</p>
+    </div>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
+    <h3 class="arbitrage__title">Suivre les événements sans voler l'espace à la vue radar</h3>
+    <p>Le cœur de l'interface : comment l'instructeur visualise et déclenche les événements de l'exercice tout en gardant l'œil sur le trafic ? Nous avons prototypé plusieurs représentations temporelles. La timeline circulaire, inspirée de l'horloge, était élégante mais prenait trop de place au détriment de la vue radar. Une piste combinant timeline horizontale et verticale simultanément a été écartée pour sa charge cognitive.</p>
+    <p>J'ai retenu une <em>timeline horizontale en bas de l'écran</em>, compacte, où chaque bloc résume un message par le nom de l'interlocuteur, avec un code couleur distinguant la fréquence courante des autres. Un clic déclenche le message audio via la synthèse vocale. La règle qui a guidé ces choix : préserver la vue radar et limiter la charge cognitive.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">SECOND PARTI PRIS</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Réutiliser un repère connu</h3>
+    <p>Pour manipuler les avions du trafic, plutôt que d'inventer un mode d'interaction, nous avons intégré un Navigation Display (ND), l'écran que les instructeurs connaissent déjà du cockpit. Le faible coût d'apprentissage et l'efficacité de la manipulation directe primaient sur l'originalité. On part de ce que l'utilisateur sait déjà.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">LE RÉSULTAT</div>
+    <p>Le chef d'œuvre a abouti à un prototype démontrable du poste de supervision, et surtout à la spécification des besoins et des éléments clés pour rendre une simulation plus réaliste. Il était conçu comme le prélude d'un travail de recherche à l'ENAC. Pour moi, c'est le projet fondateur en design d'interaction : comprendre un métier exigeant avant de dessiner, observer l'usage réel, arbitrer entre densité et charge cognitive sur une interface critique.</p>
+  </div>
+
+  <a href="index.html#work" class="study-next">
+    <span class="study-next__label">RETOUR</span>
+    <span style="display:flex; align-items:center; gap:14px;"><span class="study-next__title">Voir tous les projets</span><span class="study-next__arrow">→</span></span>
+  </a>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script>
+(function(){
+  var hamburger=document.querySelector('.nav-hamburger');
+  var mobileNav=document.getElementById('nav-mobile');
+  if(hamburger&&mobileNav){
+    hamburger.addEventListener('click',function(){
+      var open=mobileNav.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    mobileNav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click',function(){ mobileNav.classList.remove('is-open'); hamburger.setAttribute('aria-expanded','false'); });
+    });
+  }
+
+  var cursor=document.getElementById('cursor');
+  var cx=0,cy=0,mx=0,my=0;
+  window.addEventListener('mousemove',function(e){ mx=e.clientX; my=e.clientY; });
+  function loop(){ requestAnimationFrame(loop); cx+=(mx-cx)*.2; cy+=(my-cy)*.2; if(cursor){cursor.style.left=cx+'px'; cursor.style.top=cy+'px';} }
+  loop();
+  document.addEventListener('mouseover',function(e){ if(e.target.closest('a,button')&&cursor){ cursor.style.width='52px'; cursor.style.height='52px'; cursor.style.background='rgba(91,108,255,.18)'; }});
+  document.addEventListener('mouseout',function(e){ if(e.target.closest('a,button')&&cursor){ cursor.style.width='28px'; cursor.style.height='28px'; cursor.style.background='transparent'; }});
+
+  function waitFor(cond,cb){ if(cond()){cb();return;} var n=0,t=setInterval(function(){if(cond()){clearInterval(t);cb();}else if(++n>200)clearInterval(t);},50); }
+  waitFor(function(){ return window.gsap&&window.ScrollTrigger; },function(){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('[data-reveal]').forEach(function(el){
+      gsap.from(el,{y:40,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%',toggleActions:'play none none none'}});
+    });
+  });
+})();
+</script>
+<script src="transition.js" defer></script>
+<script src="study-extras.js" defer></script>
+</body>
+</html>

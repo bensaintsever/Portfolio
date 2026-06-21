@@ -217,6 +217,21 @@ figure { margin: 0; }
   border-radius: var(--radius-pill);
   font-weight: 600;
 }
+.nav-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 12px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-lang a.is-active {
+  color: var(--c-text);
+  font-weight: 700;
+}
+.nav-lang .sep {
+  color: rgba(255, 255, 255, 0.2);
+}
 .nav-left {
   display: flex;
   align-items: center;
@@ -290,6 +305,14 @@ figure { margin: 0; }
 .nav-mobile.is-open { display: flex; }
 .nav-mobile a { color: var(--c-text-muted); padding: 12px; transition: color .2s; }
 .nav-mobile a:hover { color: var(--c-text); }
+.nav-mobile .nav-lang {
+  flex-direction: row;
+  border-left: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  margin-left: 0;
+}
+.nav-mobile .nav-lang a { padding: 4px; }
 
 /* --- SUBNAV (study anchors, sticky under the main header) --- */
 .subnav {

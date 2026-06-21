@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hustle Up · Benjamin Saint-Sever</title>
+<meta name="description" content="Hustle Up case studies: AI workflow, multi-theme design system, header redesign, gym owner dashboard.">
+<meta name="theme-color" content="#3bbf73">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="ptr-head-guard.js"></script>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- NAV (global, identique sur toutes les pages) -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index-en.html" class="nav-logo">Benjamin Saint-Sever</a>
+    <span class="nav-location">TOULOUSE</span>
+  </div>
+  <div class="nav-links">
+    <a href="index-en.html#work">Work</a>
+    <a href="index-en.html#method">Method</a>
+    <a href="index-en.html#about">About</a>
+    <a href="index-en.html#contact" class="nav-cta">Contact</a>
+    <div class="nav-lang">
+      <a href="hustle-up.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+      <span class="sep">/</span>
+      <a href="hustle-up-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+    </div>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index-en.html#work">Work</a>
+  <a href="index-en.html#method">Method</a>
+  <a href="index-en.html#about">About</a>
+  <a href="index-en.html#contact" class="nav-cta">Contact</a>
+  <div class="nav-lang">
+    <a href="hustle-up.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+    <span class="sep">/</span>
+    <a href="hustle-up-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+  </div>
+</div>
+
+<!-- SUBNAV (ancres des études Hustle Up) -->
+<nav class="subnav" style="--accent:var(--c-green);">
+  <div class="subnav__inner">
+    <a href="#ia"><span class="subnav__num">01</span> Designing with AI</a>
+    <a href="#ds"><span class="subnav__num">02</span> Design system</a>
+    <a href="#header"><span class="subnav__num">03</span> Header</a>
+    <a href="#dashboard"><span class="subnav__num">04</span> Dashboard</a>
+  </div>
+</nav>
+
+<main>
+<!-- PROJECT INTRO -->
+<section class="study" style="padding-top:140px;">
+  <a href="index-en.html#work" class="study__back"><span class="c-green">‹</span> Back to projects</a>
+  <div data-reveal class="mono-label" style="margin-bottom:18px;"><span class="c-green">●</span>&nbsp;&nbsp;CASE STUDIES · 4 PARTS</div>
+  <h1 data-reveal style="margin:0 0 18px; font-size:clamp(34px,6vw,72px); font-weight:600; letter-spacing:-.03em; line-height:1;">Hustle Up</h1>
+  <p data-reveal style="margin:0; max-width:720px; font-size:18px; line-height:1.55; color:var(--c-text-secondary);">A sports &amp; wellness platform for three audiences (athlete, coach, owner). Four design decisions, each told through the choice that shaped it.</p>
+</section>
+
+<!-- ETUDE 01: CONCEVOIR AVEC L'IA -->
+<section id="ia" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">01</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Designing with AI</h2>
+  <p data-reveal class="study__subtitle">Grafting a mockup generation workflow onto the design system, without relinquishing control.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">A workflow where AI generates mockups anchored in the existing design system (tokens + real components), not "in a vacuum". Result: accelerated production without loss of consistency, the designer retains decision-making power at every step.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>Setting up the AI-assisted design workflow</span></div>
+    <div class="study__meta-item"><label>Tools</label><span>Figma, Figma MCP, Claude Code, Claude Design (POC)</span></div>
+    <div class="study__meta-item"><label>Context</label><span>Based on the multi-audience, multi-theme DS</span></div>
+    <div class="study__meta-item"><label>Period</label><span>late 2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:21/9;">
+    <img src="assets/images/hustle-ia/workflow-v2-maturite.svg" alt="Diagram of the AI-assisted design workflow" style="object-fit:contain; background:#fff;" loading="lazy">
+    <span class="study__image-label">AI WORKFLOW ANCHORED IN DS</span>
+  </div>
+  <p data-reveal class="study__caption">The workflow: an established flow anchored in the design system, and tools sorted by maturity level.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>Once the design system was in place, production remained. Traditional screen-by-screen mockup creation is slow when a product has multiple audiences (athlete, coach, owner) and several themes to adapt. Conversely, asking an AI to generate an interface "in a vacuum" produces generic results: plausible screens but off-system, ignoring components and tokens. Neither approach offered both speed and consistency.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <p>I built a workflow where AI never starts from scratch: it generates based on the design system and the product's codebase.</p>
+    <ul class="study__list">
+      <li><strong>The DS as an anchor point</strong>: organized by semantic tokens per theme, ensuring the generated screens are truly grounded in the system, not approximations to be reworked.</li>
+      <li><strong>A refined process with Claude Code</strong>, faithful to real components and tokens. The AI proposes, I refine as a designer, the mockup moves to conception; implementation remains with the developers.</li>
+      <li><strong>Automated Figma file maintenance</strong> via Figma MCP driven by scripts generated with Claude: a repetitive task becomes fast and consistent.</li>
+      <li><strong>Control at every step</strong>: I define the intent and constraints, AI accelerates, I keep the decision-making and quality control.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="poc-block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:12px;">WHAT I'M EXPLORING NEXT · POC</div>
+    <p>I'm testing interface generation with Claude Design, integrating the design system mirrored from the repo to rely on real components. The goal remains constant (never generate off-system), but the tooling evolves. I present this as an ongoing exploration, not a given: distinguishing the established from what I'm testing is part of my way of working.</p>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">Anchoring generation on the design system rather than prompting in a vacuum</h3>
+    <p>The common reflex is to describe a screen to the AI and hope for a good result. The issue: it's disconnected from the system, everything has to be reworked, and the speed gain vanishes. I made the opposite choice: rely on the already built DS so the AI generates <em>within it, not beside it</em>. This is only possible because the foundation existed and was deeply structured.</p>
+    <p>The second stance is the designer's role. AI isn't a substitute, it's a fast executor: the judgment (what's right for the user, what we keep) remains with the designer.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">A TOOL TESTED THEN DISCARDED</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Bridge, evaluated then abandoned</h3>
+    <p>I evaluated Bridge to generate directly in Figma. After putting it to the test, I set it aside: production and iteration were too slow, token consumption too high compared to the gain. Testing a tool and deciding not to keep it is part of the job.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>The workflow accelerates production while preserving design intent and system consistency. It's an ability few designers can demonstrate practically: a real process, not a demo, anchored in a production DS and used daily. The boundary remains clear: I design and generate mockups anchored in the system, implementation is up to the developers.</p>
+  </div>
+
+</section>
+
+<!-- ETUDE 02: DESIGN SYSTEM -->
+<section id="ds" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">02</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Hustle Up design system</h2>
+  <p data-reveal class="study__subtitle">Systematizing a disparate existing base to support three audiences and multiple themes, without duplicating it.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Semantic token architecture across 4 themes (Athlete Light/Dark, Owner, Coach). A component never references a color, only a role. The same button changes appearance depending on context without duplication. Integrated with devs via Storybook.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>Design, documentation, and dev integration</span></div>
+    <div class="study__meta-item"><label>Tools</label><span>Figma (and Figma MCP), Storybook</span></div>
+    <div class="study__meta-item"><label>Period</label><span>late 2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/hustle-ds/composants-introduction.png" alt="Anatomy of a component across four themes" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    <span class="study__image-label">ONE COMPONENT · 4 THEMES</span>
+  </div>
+  <p data-reveal class="study__caption">Anatomy of a component, applied across four themes.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>Hustle Up targets three audiences (athletes, owners, coaches), each with its own theme and accent, on web and mobile, light and dark. The starting point wasn't a blank page: components existed, but were disparate, with no tokens and incomplete color management. The real challenge: making <strong>a single base</strong> support all these contexts without duplicating it, starting from an uneven existing foundation.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <ul class="study__list">
+      <li><strong>A token architecture</strong> where there was none: global colors at the base, then a semantic layer (interactive, surface, feedback) describing intent, not value.</li>
+      <li><strong>Reworked existing components</strong> to remove disparities and complete color management, ensuring everything aligns under the same tokens.</li>
+      <li><strong>Adapted across four themes</strong> (Athlete Light, Athlete Dark, Owner, Coach): the same token points to a different value depending on the theme, without touching the component.</li>
+      <li><strong>Documented in Storybook</strong> and integrated with devs via a shared design ↔ code token system: no manual translation, no gap between mockup and product.</li>
+    </ul>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/9;">
+      <img src="assets/images/hustle-ds/tokens-themes.png" alt="Semantic token architecture by theme" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    </div>
+    <figcaption class="study__caption">Semantic tokens, applied theme by theme.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">A semantic token layer rather than direct colors</h3>
+    <p>The simple choice would have been assigning colors directly to components, theme by theme. It works at first, but becomes unmanageable as soon as you add an audience or a dark mode. I inserted a semantic layer between global colors and components: a button doesn't say "I am purple," it says <em>"I use the primary interactive color,"</em> and the theme decides.</p>
+    <p>This level of indirection requires more upfront work, but it's exactly what makes the multi-audience system sustainable, and what made plugging in an AI-assisted workflow possible.</p>
+  </div>
+
+  <div data-reveal style="margin:8px 0 44px;">
+    <div class="mono-label--sm" style="margin-bottom:20px;">SCOPE COVERED</div>
+    <div class="gallery">
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/suivi-coach.png" alt="Coach tracking" loading="lazy">
+        <p class="gallery__caption">Individual coach tracking</p>
+        <p class="gallery__desc">Goals, cycles, injuries, events, and records with their progression.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/chrono-bpm.png" alt="Timer BPM" loading="lazy">
+        <p class="gallery__caption">Timer &amp; BPM tracking</p>
+        <p class="gallery__desc">Heart rate tracking in the timer app, curve and averages.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/social-cards.png" alt="Social space" loading="lazy">
+        <p class="gallery__caption">Social space</p>
+        <p class="gallery__desc">Exchanges around a session, cards adapted across all their states.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/box-athlete.png" alt="CrossFit Box" loading="lazy">
+        <p class="gallery__caption">CrossFit box section</p>
+        <p class="gallery__desc">Athlete view: info, slot booking, coach contact, shop.</p>
+      </div>
+      <div class="gallery__item">
+        <img src="assets/images/hustle-features/vitrine-coach.png" alt="Coach showcase" loading="lazy">
+        <p class="gallery__caption">Coach showcase</p>
+        <p class="gallery__desc">Highlighting coaches to sell training and tracking.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>Hustle Up has a design system that supports its three audiences and themes on a single base, where adding a universe doesn't break components. Most importantly, it lives within the product thanks to shared design ↔ code tokens and the integration led with the devs on Storybook. And this is the same foundation that later allowed grafting the AI-assisted workflow.</p>
+  </div>
+
+</section>
+
+<!-- ETUDE 03: REDESIGN DU HEADER -->
+<section id="header" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">03</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Programming header redesign</h2>
+  <p data-reveal class="study__subtitle">Putting the reading of a dense page back in the right order.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">The programming header had the title centered, a contrasted area that short-circuited the gaze, and two scattered visualization controls. Reworked based on the eye's path, becoming a pattern reused on coach views.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>UI/UX designer</span></div>
+    <div class="study__meta-item"><label>Context</label><span>Session programming view</span></div>
+    <div class="study__meta-item"><label>Reuse</label><span>Reused on coach planning views</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/9;">
+    <img src="assets/images/hustle-features/header-parcours-oeil.png" alt="Eye's path on the old header" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">EYE TRACKING</span>
+  </div>
+  <p data-reveal class="study__caption">The old header: drawn by the contrasted area in the center, the gaze zigzags instead of following the reading flow.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p style="margin-bottom:4px;">The programming view header accumulated too many elements, and its structure hindered reading. Three problems compounded:</p>
+    <ul class="study__list">
+      <li>The eye scans the page from left to right, yet <strong>the program title was relegated to the center</strong>, lost in the middle rather than at the top.</li>
+      <li>A <strong>high-contrast area right in the middle</strong> short-circuited natural reading.</li>
+      <li>Two places were used to change the visualization: the date on the left, density on the right via a switch—an inconsistent component for toggling between two modes.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <p>Rather than tweaking the existing layout, I reworked the header starting from the eye's path: the title returns to the top, the high-contrast area is softened, and the visualization control is made coherent instead of being split between a date and a switch.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/9;">
+      <img src="assets/images/hustle-features/header-apres.png" alt="New programming header" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    </div>
+    <figcaption class="study__caption">After: title at the top, softened contrast, and grouped visualization control.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">Making the header follow the page's reading flow</h3>
+    <p>On a dense page, a header isn't a toolbar to fill; it's <em>what provides the entry point for the gaze</em>. The program title returns to where the eye first lands, the contrasted area stops interrupting the reading flow, and choosing how we view the week becomes a single logic instead of two. It must follow the reading flow, not oppose it.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>The header now guides reading instead of hindering it. The gained consistency made it a reusable base: it was adopted as-is for the new coach planning views, avoiding reinventing a header for each view.</p>
+  </div>
+
+</section>
+
+<!-- ETUDE 04: DASHBOARD GYM OWNER -->
+<section id="dashboard" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num">04</span>
+    <span class="mono-label">HUSTLE UP</span>
+  </div>
+  <h2 data-reveal class="study__title">Gym owner dashboard</h2>
+  <p data-reveal class="study__subtitle">Centralizing the daily management of a gym, with role-adapted access.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Owner interviews → single management view answering "where do I act today?". Each block = an entry point to details, not the detail itself. Finance segmented by role. Positive feedback; an unused widget removed post-launch.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>DS, user research, view design</span></div>
+    <div class="study__meta-item"><label>Team</label><span>1 PO, and the CEO for some feedback</span></div>
+    <div class="study__meta-item"><label>Tools</label><span>Figma (and Figma MCP)</span></div>
+    <div class="study__meta-item"><label>Period</label><span>late 2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/hustle-dashboard/dashboard-owner.png" alt="Main view of the gym owner dashboard" style="object-fit:cover; object-position:top;" loading="lazy">
+    <span class="study__image-label">OWNER DASHBOARD</span>
+  </div>
+  <p data-reveal class="study__caption">The owner's management view, dense but readable.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>After interviewing owners, an observation: to run their gym daily, they need centralized information they either didn't have, or only found scattered across the product: attendance, class fill rates, engagement, and financials. The problem wasn't a lack of data, but <strong>its dispersion</strong>. Nowhere answered the morning question: is my gym running well today, and where should I take action?</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <ul class="study__list">
+      <li><strong>Identified in interviews</strong> the information that matters for daily tracking and grouped the needs on a single view: today's drop-ins, trial sessions, filling classes, engagement, and a KPI section.</li>
+      <li><strong>Centralized in thematic columns</strong> on the owner theme. Each block is a summary, a trend, a key figure, not an exhaustive table.</li>
+      <li><strong>Accounted for roles</strong> from the design phase: finance (on the left) falls under the financial role; athlete info remains accessible to the coach, without viewing rights for finance.</li>
+      <li><strong>Reused the DS unified table model</strong> for detail pages (finances, schedule, members): filters, search, export. The dashboard links to them when the owner wants to dig deeper.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">A management view, not an exhaustive dashboard</h3>
+    <p>The temptation with a dashboard is to include everything (every athlete, every transaction) because it all already exists. I decided the opposite: the dashboard only shows what helps to <em>decide</em>. Each block is an entry point to a detail, not the detail itself: you see churn and the few athletes to follow up with, a link leads to the full list.</p>
+    <p>On a management interface, value isn't in the quantity displayed but in the decision it triggers. The detail must remain a click away, not right before the eyes.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">IN ADDITION</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Role-adapted access</h3>
+    <p>One gym, multiple viewing rights. Rather than multiplying screens, the same view modulates according to the role: the financial profile sees the same structure minus the financial blocks, rearranged to remain readable. Everyone sees what concerns them, sensitive information remains framed by permissions.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>The owner has a single view that centralizes previously dispersed tracking and answers "where do I act today?". User feedback was good. A tracking decision highlights the method: a note-taking feature, appreciated in prototype but barely used in reality, was not maintained: keeping it would have bloated the view without aiding decisions.</p>
+  </div>
+
+  <a href="index-en.html#work" class="study-next">
+    <span class="study-next__label">BACK</span>
+    <span style="display:flex; align-items:center; gap:14px;"><span class="study-next__title">View all projects</span><span class="study-next__arrow">→</span></span>
+  </a>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+<script src="transition.js" defer></script>
+<script src="study-extras.js" defer></script>
+</body>
+</html>

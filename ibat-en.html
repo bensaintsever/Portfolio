@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ISYBUY &amp; IBAT · Benjamin Saint-Sever</title>
+<meta name="description" content="ISYBUY and IBAT case studies: SaaS procurement platform, quote scanning, mobile field app, time tracking on construction sites.">
+<meta name="theme-color" content="#e0913b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="ptr-head-guard.js"></script>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- NAV (global, identique sur toutes les pages) -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index-en.html" class="nav-logo">Benjamin Saint-Sever</a>
+    <span class="nav-location">TOULOUSE</span>
+  </div>
+  <div class="nav-links">
+    <a href="index-en.html#work">Work</a>
+    <a href="index-en.html#method">Method</a>
+    <a href="index-en.html#about">About</a>
+    <a href="index-en.html#contact" class="nav-cta">Contact</a>
+    <div class="nav-lang">
+      <a href="ibat.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+      <span class="sep">/</span>
+      <a href="ibat-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+    </div>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index-en.html#work">Work</a>
+  <a href="index-en.html#method">Method</a>
+  <a href="index-en.html#about">About</a>
+  <a href="index-en.html#contact" class="nav-cta">Contact</a>
+  <div class="nav-lang">
+    <a href="ibat.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+    <span class="sep">/</span>
+    <a href="ibat-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+  </div>
+</div>
+
+<!-- SUBNAV (ancres des études ISYBUY & IBAT) -->
+<nav class="subnav" style="--accent:var(--c-orange);">
+  <div class="subnav__inner">
+    <a href="#isybuy"><span class="subnav__num">05</span> Web procurement platform</a>
+    <a href="#scan"><span class="subnav__num">06</span> Quote scanning</a>
+    <a href="#achat"><span class="subnav__num">07</span> Mobile procurement</a>
+    <a href="#temps"><span class="subnav__num">08</span> Time tracking</a>
+  </div>
+</nav>
+
+<main>
+<!-- ISYBUY INTRO -->
+<section class="study" style="padding-top:140px;" id="isybuy">
+  <a href="index-en.html#work" class="study__back"><span class="c-orange">‹</span> Back to projects</a>
+  <div data-reveal class="mono-label" style="margin-bottom:18px;"><span class="c-orange">●</span>&nbsp;&nbsp;ISYBUY · 2022–2024</div>
+  <h1 data-reveal style="margin:0 0 18px; font-size:clamp(34px,6vw,72px); font-weight:600; letter-spacing:-.03em; line-height:1;">SaaS procurement platform (ISYBUY)</h1>
+  <p data-reveal style="margin:0 0 40px; max-width:720px; font-size:18px; line-height:1.55; color:var(--c-text-secondary);">Adapting a core product into a white-label solution, with a design system and evidence-based decisions.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">ISYBUY adapts the IBAT Achat core for corporate procurement outside construction, sold as a white label. I led a design system of generic rules (tables, forms, redesigned navigation) so a single base accommodates all clients without custom work, plus sourcing views specifically for managing the supplier panel.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>Design system lead, user research</span></div>
+    <div class="study__meta-item"><label>Team</label><span>1 PO, 1 PM, 8 developers</span></div>
+    <div class="study__meta-item"><label>Tools</label><span>Figma, Adobe XD</span></div>
+    <div class="study__meta-item"><label>Period</label><span>2022–2024</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-web/isybuy-accueil-dashboard.png" alt="ISYBUY platform homepage screen" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    <span class="study__image-label">ISYBUY HOME</span>
+  </div>
+  <p data-reveal class="study__caption">ISYBUY homepage, the procurement platform adapted for corporate use.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CONTEXT</div>
+    <p>ISYBUY is a SaaS platform for supplier ordering, catalog management, and traceability. It is built entirely on the IBAT Achat codebase, the tool designed for construction: the same core product, adapted this time for corporate procurement outside construction and sold as a white label. My role was to lead the design system and conduct user research on this web product, within a team of 1 PO, 1 PM, and 8 developers.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>The core product was built incrementally based on needs, without a structuring method. As a result, similar tools like tables and forms worked differently from one screen to another, and the navigation, accumulated in blocks, had become confusing for both users and internal teams. Adapting this core into a white label for a new market made this push for consistency even more necessary.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <ul class="study__list">
+      <li><strong>Inventoried recurring view types</strong> and established a documented design system of generic rules: single-column forms with logical sequences, and a unified table model (unlimited filters, search, column customization, Excel/PDF/image export, pagination).</li>
+      <li><strong>Redesigned the navigation</strong>, moving from an accumulation of blocks to a side panel and a fixed top bar, after several iterations and foundational thinking intended to serve as a base for future products.</li>
+      <li><strong>Adapted this system for white-labeling</strong>, ensuring each client finds a coherent base under their own identity.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="gallery" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+    <figure class="gallery__item" style="margin:0;">
+      <img src="assets/images/ibat-web/isybuy-nav-avant.png" alt="Old ISYBUY navigation accumulated in blocks" style="aspect-ratio:16/10; background:#f4f4f2;" loading="lazy">
+      <p class="gallery__caption">Before</p>
+      <p class="gallery__desc">Navigation accumulated in blocks, becoming confusing.</p>
+    </figure>
+    <figure class="gallery__item" style="margin:0;">
+      <img src="assets/images/ibat-web/isybuy-admin-navigation.png" alt="Redesigned ISYBUY navigation: side panel and fixed top bar" style="aspect-ratio:16/10; background:#f4f4f2;" loading="lazy">
+      <p class="gallery__caption">After</p>
+      <p class="gallery__desc">Side panel and fixed top bar, designed to last.</p>
+    </figure>
+  </div>
+
+  <div data-reveal class="arbitrage" style="border-left-color:var(--c-orange);">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">A single core for all clients</h3>
+    <p>Selling the product as a white label made it tempting to adapt each screen for each client on a case-by-case basis. The problem is that as clients are added, this custom work becomes impossible to maintain. I established the opposite approach: a design system of generic rules, table models, forms, and navigation valid everywhere, upon which each client's identity is applied without altering the structure. Consistency comes from the system, not from repeated screen-by-screen work.</p>
+    <p>This choice requires more upfront effort, but it's what makes white-labeling sustainable: a single core to maintain, client adaptations that don't weaken it, and a reusable base beyond just this product.</p>
+    <p style="color:var(--c-text); margin-top:14px;"><strong>The principle I retain:</strong> to adapt a product for multiple clients, it's better to have a core generic enough to accommodate them all than case-by-case adaptations that end up piling up.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE ISYBUY SPECIFICITY</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Sourcing features</h3>
+    <p>Adapting the product for corporate use outside construction wasn't just a reskin. ISYBUY received sourcing features absent from the construction version: supplier evaluation from risk and criticality angles, CSR tracking, and associated action plans. These views are data-dense and designed to help a procurement department decide where to focus its attention. This is also what gave value to the white-label version, offering each client a tool to manage their supplier panel.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/ibat-web/isybuy-risque-fournisseur.png" alt="ISYBUY sourcing view: supplier risks, criticality and action plans" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    </div>
+    <figcaption class="study__caption">A sourcing view unique to ISYBUY: supplier risk, criticality, and action plans.</figcaption>
+  </figure>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">IN ADDITION</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Table readability</h3>
+    <p>An example of the rigor applied to the design system: for table columns, I aligned content by its nature (text left, amounts right) and placed the sorting icon opposite to this alignment. This decision preserves readability by preventing the sorting element from blending into the column's reading flow.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/ibat-web/isybuy-commande-tableau.png" alt="Unified ISYBUY table model on an order: columns, alignments and totals" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+    </div>
+    <figcaption class="study__caption">The unified table model, shown here on an order.</figcaption>
+  </figure>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>ISYBUY successfully brought the core product to a new market, corporate procurement outside construction, without starting from scratch: the same core, white-labeled, enriched with sourcing views specific to this audience. The design system unified recurring views and provided a navigation base designed to outlast this single product, which was exactly the condition for a multi-client adaptation to remain maintainable.</p>
+  </div>
+
+</section>
+
+<!-- SCAN DE DEVIS -->
+<section id="scan" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-red">06</span>
+    <span class="mono-label">IBAT</span>
+  </div>
+  <h2 data-reveal class="study__title">Quote scanning, from paper to cart</h2>
+  <p data-reveal class="study__subtitle">A design decision settled by a user test, not by instinct.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Internal debate without consensus: host the scan in the cart page or in a dedicated modal? I prototyped both versions and compared them in a remote test (SUS questionnaire). The modal won because it isolates the critical task. Decision settled by evidence.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>UX/UI designer, user research</span></div>
+    <div class="study__meta-item"><label>Method</label><span>Prototyping both versions, remote testing, SUS questionnaire</span></div>
+    <div class="study__meta-item"><label>Tools</label><span>Adobe XD, Figma</span></div>
+    <div class="study__meta-item"><label>Period</label><span>2018–2022</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-scan/scan-modale-retenue.png" alt="Retained quote scanning modal" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">MODAL RETAINED AFTER TEST</span>
+  </div>
+  <p data-reveal class="study__caption">The modal version, retained after comparison in user testing.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">CONTEXT</div>
+    <p>On the IBAT Achat web platform, a feature allows converting a supplier quote into an order cart directly from its scan. It's a key task in the procurement journey, but also a dense one: you must recognize items, check quantities and prices, then validate. The design question was where to house this in the interface.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>Two integrations clashed, and the debate was internal, with no obvious consensus. Should the scan be hosted directly on the cart page, closest to the ordering context, or isolated in a dedicated modal? Each side had arguments, and deciding by instinct risked imposing an intuition rather than an answer.</p>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/ibat-scan/scan-panier-teste.png" alt="Version integrated into the cart page, tested then discarded" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    </div>
+    <figcaption class="study__caption">The version integrated into the cart page, tested then discarded: the task was diluted amid too many elements.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage" style="border-left-color:var(--c-red);">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">Isolating the critical task in a modal</h3>
+    <p>Rather than deciding by instinct, I prototyped both versions in Adobe XD and Figma, then compared them remotely with two user groups using a SUS questionnaire. Integrated into the cart page, the task became diluted amid too many elements and users struggled to complete it. The modal won precisely because it isolated the action and focused attention solely on what needed to be done. I therefore abandoned the in-page integration in favor of the clearer, more efficient modal.</p>
+    <p style="color:var(--c-text); margin-top:14px;"><strong>The principle I retain:</strong> a critical task benefits from being isolated from its context when the environment is dense.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>The chosen journey was validated directly by users in testing rather than picked by instinct, settling an internal debate with evidence. Satisfaction feedback on the solution was positive. It is the clearest example, in my work on IBAT, of a design decision arbitrated by measured comparison rather than opinion.</p>
+  </div>
+
+</section>
+
+<!-- ACHAT MOBILE -->
+<section id="achat" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-red">07</span>
+    <span class="mono-label">IBAT</span>
+  </div>
+  <h2 data-reveal class="study__title">Mobile procurement</h2>
+  <p data-reveal class="study__subtitle">Ordering from suppliers from the construction site, even without a network.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Field ordering app designed around offline mode: prepare an order without a network, sync upon return. Secondary decision: allow logging of on-site purchases to avoid forcing a single workflow.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>UX/UI designer, user research</span></div>
+    <div class="study__meta-item"><label>Personas</label><span>Site manager, foreman</span></div>
+    <div class="study__meta-item"><label>Tools</label><span>Adobe XD, Figma</span></div>
+    <div class="study__meta-item"><label>Period</label><span>2018–2022</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-achat/ibat-achat-app.png" alt="IBAT Achat application" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">IBAT ACHAT APP</span>
+  </div>
+  <p data-reveal class="study__caption">Ordering and document scanning screens.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>Before the app, ordering was done by phone via a sales rep. The process was slow, generated paperwork, and offered no traceability. In the field, a concrete constraint was added: the mobile network is often weak or absent on a construction site, and purchasing habits don't always follow a clean digital flow.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <ul class="study__list">
+      <li><strong>Conducted user research</strong> (personas, user journey) to understand how ordering actually happens in the field.</li>
+      <li><strong>Designed wireframes then a high-fidelity storyboard</strong>: placing an order, tracking, and document scanning to capture a quote or delivery slip directly from the phone.</li>
+      <li><strong>Adapted it into the IBAT UI kit</strong> to maintain consistency with the rest of the suite.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">Designing for the networkless site, not the connected office</h3>
+    <p>The simple way to design an ordering app is to assume a permanent connection. On a construction site, this assumption fails. I chose to design around offline mode: preparing and logging an order without a network, then synchronizing once the connection returns.</p>
+    <p>It's a structuring constraint that changes the design: thinking about intermediate states, what is saved locally, what syncs, and how the user knows where they stand. This stance comes directly from field observation during research, not from a technical preference.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">IN ADDITION</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Respecting on-site purchasing habits</h3>
+    <p>Not everything goes through an advance order. Sometimes a purchase is made directly at a point of sale. Rather than forcing a single flow, the application allows retroactive entry of an on-site purchase, ensuring traceability remains complete without constraining field habits.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>The application replaced phone orders and paperwork with a traceable journey, usable from the site even without a network. Document scanning simplified capturing quotes or slips without re-entry.</p>
+  </div>
+
+</section>
+
+<!-- GESTION DES TEMPS -->
+<section id="temps" class="study">
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-red">08</span>
+    <span class="mono-label">IBAT</span>
+  </div>
+  <h2 data-reveal class="study__title">Time tracking on site</h2>
+  <p data-reveal class="study__subtitle">Tracking team hours without re-entry, from the field to the office.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Replacing pen-and-paper with a single entry closer to the field. Key decision: reconciling information density (weekly view) with direct manipulation (in-cell editing) in the same grid. V2 reworked after user testing.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>UX/UI designer, user research</span></div>
+    <div class="study__meta-item"><label>Personas</label><span>Team leader, site manager, HR</span></div>
+    <div class="study__meta-item"><label>Tools</label><span>Adobe XD, Figma</span></div>
+    <div class="study__meta-item"><label>Period</label><span>2018–2022</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
+    <img src="assets/images/ibat-temps/ibat-temps-app.png" alt="IBAT Temps application" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+    <span class="study__image-label">IBAT TEMPS</span>
+  </div>
+  <p data-reveal class="study__caption">The weekly grid: direct entry in the cell.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>Hour tracking was done with pen and paper, with later re-entry and no centralization. Hours noted in the field were re-typed later, a source of errors and wasted time, and no one had a reliable consolidated view.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <ul class="study__list">
+      <li><strong>Conducted user research</strong> (personas, user journey) to map out who enters what, when, and what each profile expects from the tool.</li>
+      <li><strong>Designed wireframes then a high-fidelity storyboard</strong> covering clocking in, entering hours and absences, adding equipment rental hours, and checking the schedule.</li>
+      <li><strong>Produced a second version</strong> improved by user tests, fixing the friction points from the first.</li>
+    </ul>
+  </div>
+
+  <figure data-reveal style="margin:0 0 16px;">
+    <div class="study__image" style="aspect-ratio:16/9;">
+      <img src="assets/images/ibat-temps/ibat-temps-storyboard.png" alt="Storyboard of the clocking and entry journey" style="object-fit:cover; object-position:top;" loading="lazy">
+    </div>
+    <figcaption class="study__caption">Storyboard of the clocking and entry journey.</figcaption>
+  </figure>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">Seeing everything at a glance, without giving up fast editing</h3>
+    <p>Tracking hours poses a classic data-rich interface dilemma: to make a decision, you need a dense overview; but to enter data quickly in the field, you need direct editing. Density and direct manipulation pull in opposite directions.</p>
+    <p>I designed the view to reconcile both: a grid that shows the entire week at once, where entry and correction happen directly in the cell, right where the eye is already looking, without opening a separate form. Direct manipulation happens within the density, not beside it.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>The application replaced pen-and-paper and re-entry with a single capture closer to the field, usable immediately by HR without double entry. The second version, reworked based on testing, fixed the friction points of the first.</p>
+  </div>
+
+  <a href="index-en.html#work" class="study-next">
+    <span class="study-next__label">BACK</span>
+    <span style="display:flex; align-items:center; gap:14px;"><span class="study-next__title">View all projects</span><span class="study-next__arrow">→</span></span>
+  </a>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+<script src="transition.js" defer></script>
+<script src="study-extras.js" defer></script>
+</body>
+</html>

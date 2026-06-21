@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Benjamin Saint-Sever, Product / UX Designer</title>
   <meta name="description"
-    content="Portfolio de Benjamin Saint-Sever, product / UX designer. Études de cas racontées par les décisions : workflow de design assisté par IA, design system, interfaces denses en données et dashboards opérateurs.">
+    content="Benjamin Saint-Sever's portfolio, product / UX designer. Case studies told through decisions: AI-assisted design workflow, design systems, data-dense interfaces, and operator dashboards.">
   <meta name="author" content="Benjamin Saint-Sever">
   <meta name="theme-color" content="#2b3cf0">
 
@@ -14,15 +14,15 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Benjamin Saint-Sever, Product / UX Designer">
   <meta property="og:description"
-    content="Études de cas racontées par les décisions : workflow de design assisté par IA, design system, interfaces denses en données et dashboards opérateurs.">
+    content="Case studies told through decisions: AI-assisted design workflow, design systems, data-dense business interfaces.">
   <meta property="og:image" content="assets/images/og-cover.png">
-  <meta property="og:locale" content="fr_FR">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Benjamin Saint-Sever, Product / UX Designer">
   <meta name="twitter:description"
-    content="Études de cas racontées par les décisions : design assisté par IA, design system, interfaces métier denses.">
+    content="Case studies told through decisions: AI-assisted design, design systems, dense business interfaces.">
   <meta name="twitter:image" content="assets/images/og-cover.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +37,8 @@
         var userLang = localStorage.getItem('portfolio_lang');
         if (!userLang) {
           var browserLang = navigator.language || navigator.userLanguage;
-          if (browserLang && !browserLang.toLowerCase().startsWith('fr')) {
-            window.location.replace('index-en.html');
+          if (browserLang && browserLang.toLowerCase().startsWith('fr')) {
+            window.location.replace('index.html');
           }
         }
       } catch(e) {}
@@ -54,18 +54,18 @@
   <!-- NAV -->
   <nav class="nav">
     <div class="nav-left">
-      <a href="index.html" class="nav-logo">Benjamin Saint-Sever</a>
+      <a href="index-en.html" class="nav-logo">Benjamin Saint-Sever</a>
       <span class="nav-location">TOULOUSE</span>
     </div>
     <div class="nav-links">
-      <a href="#work">Travail</a>
-      <a href="#method">Méthode</a>
-      <a href="#about">À propos</a>
+      <a href="#work">Work</a>
+      <a href="#method">Method</a>
+      <a href="#about">About</a>
       <a href="#contact" class="nav-cta">Contact</a>
       <div class="nav-lang">
-        <a href="index.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+        <a href="index.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
         <span class="sep">/</span>
-        <a href="index-en.html" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+        <a href="index-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
       </div>
     </div>
     <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
@@ -75,14 +75,14 @@
 
   <!-- MOBILE NAV -->
   <div class="nav-mobile" id="nav-mobile">
-    <a href="#work">Travail</a>
-    <a href="#method">Méthode</a>
-    <a href="#about">À propos</a>
+    <a href="#work">Work</a>
+    <a href="#method">Method</a>
+    <a href="#about">About</a>
     <a href="#contact" class="nav-cta">Contact</a>
     <div class="nav-lang">
-      <a href="index.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+      <a href="index.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
       <span class="sep">/</span>
-      <a href="index-en.html" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+      <a href="index-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
     </div>
   </div>
 
@@ -96,10 +96,10 @@
       <div id="hero-label" class="hero-label">
         <span>Product / UX Designer</span>
         <span class="sep">/</span>
-        <span>7 ans</span>
+        <span>7 years</span>
         <span class="sep">/</span>
         <span>Toulouse · Full remote</span>
-        <span class="hero-badge">Ouvert aux opportunités</span>
+        <span class="hero-badge">Open to opportunities</span>
       </div>
 
       <h1 id="kname" class="hero-title">
@@ -112,9 +112,7 @@
             class="dot">.</span></span>
       </h1>
 
-      <p id="hero-tag" class="hero-tagline">Je dessine des interfaces <strong>B2B là où la donnée est dense</strong> et
-        l'enjeu concret : design systems, dashboards, outils métier. Et je raconte chaque projet par <em>l'arbitrage qui
-          l'a façonné</em>.</p>
+      <p id="hero-tag" class="hero-tagline">I design <strong>data-dense B2B interfaces</strong> where the stakes are real: design systems, dashboards, and business tools. And I tell the story of each project through <em>the decisions that shaped it</em>.</p>
     </div>
 
     <div class="hero-scroll"><span>SCROLL</span></div>
@@ -122,28 +120,27 @@
 
   <!-- POSITIONING / 4 FORCES -->
   <section class="section">
-    <p data-reveal class="intro-text">Sept ans sur des produits B2B exigeants. Ici, pas de métriques cosmétiques :
-      chaque étude se lit en quatre temps : <em>le problème, ce que j'ai fait, l'arbitrage, le résultat</em>.</p>
+    <p data-reveal class="intro-text">Seven years working on demanding B2B products. No vanity metrics here: each study is read in four steps: <em>the problem, what I did, the decision, the outcome</em>.</p>
     <div class="grid-cards">
       <div data-reveal class="grid-card">
         <div class="grid-card__num">01</div>
-        <h3 class="grid-card__title">Workflow assisté par IA</h3>
-        <p class="grid-card__desc">Une conception accélérée par l'IA, mais toujours ancrée sur le design system.</p>
+        <h3 class="grid-card__title">AI-assisted workflow</h3>
+        <p class="grid-card__desc">Design accelerated by AI, but always grounded in the design system.</p>
       </div>
       <div data-reveal class="grid-card">
         <div class="grid-card__num">02</div>
-        <h3 class="grid-card__title">Interfaces denses en données</h3>
-        <p class="grid-card__desc">Dashboards opérateurs et vues métier qui restent lisibles malgré la densité.</p>
+        <h3 class="grid-card__title">Data-dense interfaces</h3>
+        <p class="grid-card__desc">Operator dashboards and business views that remain readable despite the density.</p>
       </div>
       <div data-reveal class="grid-card">
         <div class="grid-card__num">03</div>
-        <h3 class="grid-card__title">Design systems de bout en bout</h3>
-        <p class="grid-card__desc">Des tokens sémantiques à la documentation, multi-public et multi-thème.</p>
+        <h3 class="grid-card__title">End-to-end design systems</h3>
+        <p class="grid-card__desc">From semantic tokens to documentation, multi-audience and multi-theme.</p>
       </div>
       <div data-reveal class="grid-card">
         <div class="grid-card__num">04</div>
-        <h3 class="grid-card__title">Collaboration avec les devs</h3>
-        <p class="grid-card__desc">Jusqu'à l'intégration, via un système de tokens commun design ↔ code.</p>
+        <h3 class="grid-card__title">Developer collaboration</h3>
+        <p class="grid-card__desc">Right up to integration, via a shared design ↔ code token system.</p>
       </div>
     </div>
   </section>
@@ -152,102 +149,101 @@
   <section id="work" class="section">
     <div data-reveal
       style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:40px; flex-wrap:wrap; gap:16px;">
-      <h2 style="margin:0; font-size:clamp(28px,4vw,46px); font-weight:600; letter-spacing:-.02em;">Travail sélectionné
+      <h2 style="margin:0; font-size:clamp(28px,4vw,46px); font-weight:600; letter-spacing:-.02em;">Selected work
       </h2>
-      <span class="mono-label">4 PROJETS · 9 ÉTUDES</span>
+      <span class="mono-label">4 PROJECTS · 9 STUDIES</span>
     </div>
 
     <!-- FEATURED: HUSTLE UP -->
     <div data-reveal class="project-featured bl-green">
-      <a href="hustle-up.html" class="project-featured__hero">
+      <a href="hustle-up-en.html" class="project-featured__hero">
         <img src="assets/images/hustle-dashboard/dashboard-owner.png" alt="Dashboard gym owner Hustle Up"
           loading="lazy">
         <div class="project-featured__overlay"></div>
-        <span class="project-featured__badge">★ PROJET PHARE · SPORT</span>
+        <span class="project-featured__badge">★ FEATURED PROJECT · SPORTS</span>
         <div class="project-featured__info">
-          <div class="project-featured__meta">PLATEFORME SPORT &amp; BIEN-ÊTRE · 2024</div>
+          <div class="project-featured__meta">SPORTS &amp; WELLNESS PLATFORM · 2024</div>
           <h3 class="project-featured__title">Hustle Up</h3>
         </div>
       </a>
       <div class="project-featured__summary">
-        <p>Produit multi-public (athlète, coach, owner). Le terrain où j'ai greffé un workflow IA sur le design system
-          et conçu des dashboards opérateurs.</p>
-        <span class="count">4 ÉTUDES</span>
+        <p>Multi-audience product (athlete, coach, owner). The playground where I grafted an AI workflow onto the design system and designed operator dashboards.</p>
+        <span class="count">4 STUDIES</span>
       </div>
       <div class="project-rows">
-        <a href="hustle-up.html#ia" class="project-row">
+        <a href="hustle-up-en.html#ia" class="project-row">
           <span class="project-row__num">01</span>
-          <span class="project-row__content"><span class="project-row__title">Concevoir avec l'IA</span><span
-              class="project-row__tags">WORKFLOW IA · CLAUDE CODE · MCP FIGMA</span></span>
+          <span class="project-row__content"><span class="project-row__title">Designing with AI</span><span
+              class="project-row__tags">AI WORKFLOW · CLAUDE CODE · MCP FIGMA</span></span>
           <span class="project-row__arrow">→</span>
         </a>
-        <a href="hustle-up.html#ds" class="project-row">
+        <a href="hustle-up-en.html#ds" class="project-row">
           <span class="project-row__num">02</span>
           <span class="project-row__content"><span class="project-row__title">Design system</span><span
-              class="project-row__tags">TOKENS SÉMANTIQUES · 4 THÈMES · STORYBOOK</span></span>
+              class="project-row__tags">SEMANTIC TOKENS · 4 THEMES · STORYBOOK</span></span>
           <span class="project-row__arrow">→</span>
         </a>
-        <a href="hustle-up.html#header" class="project-row">
+        <a href="hustle-up-en.html#header" class="project-row">
           <span class="project-row__num">03</span>
-          <span class="project-row__content"><span class="project-row__title">Redesign du header</span><span
-              class="project-row__tags">LISIBILITÉ · PARCOURS DE L'ŒIL</span></span>
+          <span class="project-row__content"><span class="project-row__title">Header redesign</span><span
+              class="project-row__tags">READABILITY · EYE TRACKING</span></span>
           <span class="project-row__arrow">→</span>
         </a>
-        <a href="hustle-up.html#dashboard" class="project-row">
+        <a href="hustle-up-en.html#dashboard" class="project-row">
           <span class="project-row__num">04</span>
-          <span class="project-row__content"><span class="project-row__title">Dashboard gym owner</span><span
-              class="project-row__tags">DONNÉES DENSES · PILOTAGE · ACCÈS PAR RÔLE</span></span>
+          <span class="project-row__content"><span class="project-row__title">Gym owner dashboard</span><span
+              class="project-row__tags">DENSE DATA · MANAGEMENT · ROLE-BASED ACCESS</span></span>
           <span class="project-row__arrow">→</span>
         </a>
       </div>
     </div>
 
     <!-- OTHER PROJECTS -->
-    <div data-reveal class="mono-label" style="margin:0 0 18px;">AUTRES PROJETS</div>
+    <div data-reveal class="mono-label" style="margin:0 0 18px;">OTHER PROJECTS</div>
     <div class="projects-other">
 
       <div class="project-group-header bl-orange">
         <span class="project-group-header__name c-orange">ISYBUY</span>
-        <span class="project-group-header__meta">PLATEFORME D'ACHAT SAAS · MARQUE BLANCHE · 2022–2024</span>
+        <span class="project-group-header__meta">SAAS PROCUREMENT PLATFORM · WHITE LABEL · 2022–2024</span>
       </div>
-      <a href="ibat.html#isybuy" data-reveal class="project-row project-row--other">
+      <a href="ibat-en.html#isybuy" data-reveal class="project-row project-row--other">
         <span class="project-row__num c-orange">05</span>
-        <span class="project-row__content"><span class="project-row__title">Plateforme d'achat web</span><span
-            class="project-row__tags">DESIGN SYSTEM · SOURCING · DÉCISION PAR LA PREUVE</span></span>
+        <span class="project-row__content"><span class="project-row__title">Web procurement platform</span><span
+            class="project-row__tags">DESIGN SYSTEM · SOURCING · EVIDENCE-BASED DECISION</span></span>
         <span class="project-row__arrow">→</span>
       </a>
 
       <div class="project-group-header bl-red">
         <span class="project-group-header__name c-red">IBAT</span>
-        <span class="project-group-header__meta">SUITE BTP, WEB &amp; TERRAIN · 2018–2022</span>
+        <span class="project-group-header__meta">CONSTRUCTION SUITE, WEB &amp; FIELD · 2018–2022</span>
       </div>
-      <a href="ibat.html#scan" data-reveal class="project-row project-row--other">
+      <a href="ibat-en.html#scan" data-reveal class="project-row project-row--other">
         <span class="project-row__num c-red">06</span>
-        <span class="project-row__content"><span class="project-row__title">Scan de devis</span><span
-            class="project-row__tags">TEST SUS · MODALE · DÉCISION PAR LA PREUVE</span></span>
+        <span class="project-row__content"><span class="project-row__title">Quote scanning</span><span
+            class="project-row__tags">SUS TEST · MODAL · EVIDENCE-BASED DECISION</span></span>
         <span class="project-row__arrow">→</span>
       </a>
-      <a href="ibat.html#achat" data-reveal class="project-row project-row--other">
+      <a href="ibat-en.html#achat" data-reveal class="project-row project-row--other">
         <span class="project-row__num c-red">07</span>
-        <span class="project-row__content"><span class="project-row__title">Achat mobile</span><span
-            class="project-row__tags">TERRAIN · MODE DÉCONNECTÉ</span></span>
+        <span class="project-row__content"><span class="project-row__title">Mobile procurement</span><span
+            class="project-row__tags">FIELDWORK · OFFLINE MODE</span></span>
         <span class="project-row__arrow">→</span>
       </a>
-      <a href="ibat.html#temps" data-reveal class="project-row project-row--other">
+      <a href="ibat-en.html#temps" data-reveal class="project-row project-row--other">
         <span class="project-row__num c-red">08</span>
-        <span class="project-row__content"><span class="project-row__title">Gestion des temps</span><span
-            class="project-row__tags">DENSITÉ · MANIPULATION DIRECTE</span></span>
+        <span class="project-row__content"><span class="project-row__title">Time tracking</span><span
+            class="project-row__tags">DENSITY · DIRECT MANIPULATION</span></span>
         <span class="project-row__arrow">→</span>
       </a>
 
       <div class="project-group-header bl-purple">
         <span class="project-group-header__name c-purple">ENAC</span>
-        <span class="project-group-header__meta">MASTER 2 IHM · TOULOUSE</span>
+        <span class="project-group-header__meta">MASTER'S IN HCI · TOULOUSE</span>
       </div>
-      <a href="enac.html" data-reveal class="project-row project-row--other">
+      <a href="enac-en.html" data-reveal class="project-row project-row--other">
         <span class="project-row__num c-purple">09</span>
-        <span class="project-row__content"><span class="project-row__title">Simulateur de vol</span><span
-            class="project-row__tags">DESIGN D'INTERACTION · POSTE CRITIQUE</span></span>
+        <span class="project-row__content"><span class="project-row__title">Flight simulator</span><span
+            class="project-row__tags">INTERACTION DESIGN · CRITICAL WORKSTATION</span></span>
         <span class="project-row__arrow">→</span>
       </a>
     </div>
@@ -257,27 +253,26 @@
   <section id="method" class="method">
     <div class="method__inner">
       <div data-reveal style="margin-bottom:18px;">
-        <span class="mono-label">MÉTHODE</span>
+        <span class="mono-label">METHOD</span>
       </div>
-      <h2 data-reveal class="method__title">Ce qui fait un projet, ce n'est pas l'écran final. C'est <em>l'arbitrage
-          qu'on a osé trancher</em>.</h2>
+      <h2 data-reveal class="method__title">What makes a project isn't the final screen. It's <em>the decision we dared to make</em>.</h2>
 
       <div class="grid-cards" style="margin-bottom:56px;">
         <div data-reveal class="grid-card">
-          <div class="grid-card__num">01 · CADRER</div>
-          <h3 class="grid-card__title">Le problème</h3>
+          <div class="grid-card__num">01 · FRAME</div>
+          <h3 class="grid-card__title">The problem</h3>
         </div>
         <div data-reveal class="grid-card">
-          <div class="grid-card__num">02 · FAIRE</div>
-          <h3 class="grid-card__title">Ce que j'ai fait</h3>
+          <div class="grid-card__num">02 · DO</div>
+          <h3 class="grid-card__title">What I did</h3>
         </div>
         <div data-reveal class="grid-card">
-          <div class="grid-card__num">03 · TRANCHER</div>
-          <h3 class="grid-card__title">L'arbitrage</h3>
+          <div class="grid-card__num">03 · DECIDE</div>
+          <h3 class="grid-card__title">The decision</h3>
         </div>
         <div data-reveal class="grid-card">
-          <div class="grid-card__num">04 · MESURER</div>
-          <h3 class="grid-card__title">Le résultat</h3>
+          <div class="grid-card__num">04 · MEASURE</div>
+          <h3 class="grid-card__title">The outcome</h3>
         </div>
       </div>
     </div>
@@ -287,7 +282,7 @@
   <section id="about" class="section section--border">
     <div data-reveal
       style="display:flex; align-items:baseline; justify-content:space-between; margin:54px 0; flex-wrap:wrap; gap:16px;">
-      <h2 style="margin:0; font-size:clamp(28px,4vw,46px); font-weight:600; letter-spacing:-.02em;">À propos</h2>
+      <h2 style="margin:0; font-size:clamp(28px,4vw,46px); font-weight:600; letter-spacing:-.02em;">About</h2>
       <span class="mono-label">BENJAMIN SAINT-SEVER</span>
     </div>
     <div class="about-grid">
@@ -295,16 +290,13 @@
         <img src="assets/images/portrait.jpg" alt="Benjamin Saint-Sever" loading="lazy">
       </div>
       <div>
-        <p data-reveal class="about-intro">7 ans à concevoir des produits B2B exigeants : design systems, interfaces
-          denses, dashboards opérateurs. J'aime les problèmes bien posés et les décisions qu'on peut défendre.</p>
-        <p data-reveal style="margin:0 0 40px; font-size:16px; line-height:1.6; color:#9a9a9f;">En dehors de l'écran,
-          j'apprends en faisant : un CAP cuisine par passion, des dossards Hyrox. Et le cinéma, que je regarde un peu en
-          designer : la mise en scène, le rythme, l'ambiance sonore, comment tout sert l'intention.</p>
+        <p data-reveal class="about-intro">7 years designing demanding B2B products: design systems, dense interfaces, operator dashboards. I like well-framed problems and decisions that can be defended.</p>
+        <p data-reveal style="margin:0 0 40px; font-size:16px; line-height:1.6; color:#9a9a9f;">Away from the screen, I learn by doing: a culinary arts degree out of passion, Hyrox races. And cinema, which I watch a bit like a designer: the staging, the pacing, the soundscape, how everything serves the intention.</p>
 
-        <div data-reveal class="mono-label--sm" style="margin-bottom:18px;">EN DEHORS DE L'ÉCRAN</div>
+        <div data-reveal class="mono-label--sm" style="margin-bottom:18px;">AWAY FROM THE SCREEN</div>
         <div class="about-hobbies">
           <div data-reveal class="about-hobby">
-            <img src="assets/images/hyrox.jpg" alt="Hyrox, montée sur la scène d'arrivée" loading="lazy">
+            <img src="assets/images/hyrox.jpg" alt="Hyrox, finish line stage" loading="lazy">
           </div>
         </div>
       </div>
@@ -315,8 +307,8 @@
   <!-- CONTACT -->
   <footer id="contact" class="contact">
     <div data-reveal class="mono-label" style="margin-bottom:26px;">CONTACT</div>
-    <h2 data-reveal class="contact__title">Travaillons<br>ensemble<span class="dot">.</span></h2>
-    <a id="mail" href="https://www.linkedin.com/in/benjaminsaintsever/" data-reveal class="contact__mail"><span id="mailtext">écrivez-moi</span> <span
+    <h2 data-reveal class="contact__title">Let's work<br>together<span class="dot">.</span></h2>
+    <a id="mail" href="https://www.linkedin.com/in/benjaminsaintsever/" data-reveal class="contact__mail"><span id="mailtext">email me</span> <span
         style="color:var(--c-accent-light);">→</span></a>
     <div data-reveal class="contact__socials">
       <a href="https://www.linkedin.com/in/benjaminsaintsever/">LinkedIn</a>
@@ -325,7 +317,7 @@
     </div>
     <div class="contact__footer">
       <span>© 2025 Benjamin Saint-Sever</span>
-      <a href="#top" style="color:var(--c-text-muted);">↑ HAUT DE PAGE</a>
+      <a href="#top" style="color:var(--c-text-muted);">↑ BACK TO TOP</a>
     </div>
   </footer>
 

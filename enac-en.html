@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight Simulator · Benjamin Saint-Sever</title>
+<meta name="description" content="Case study: supervision station for flight simulator, designed for ENAC instructors. Interaction design for critical interfaces.">
+<meta name="theme-color" content="#9a7cff">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="ptr-head-guard.js"></script>
+</head>
+<body>
+
+<div id="cursor"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-left">
+    <a href="index-en.html" class="nav-logo">Benjamin Saint-Sever</a>
+    <span class="nav-location">TOULOUSE</span>
+  </div>
+  <div class="nav-links">
+    <a href="index-en.html#work">Work</a>
+    <a href="index-en.html#method">Method</a>
+    <a href="index-en.html#about">About</a>
+    <a href="index-en.html#contact" class="nav-cta">Contact</a>
+    <div class="nav-lang">
+      <a href="enac.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+      <span class="sep">/</span>
+      <a href="enac-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+    </div>
+  </div>
+  <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index-en.html#work">Work</a>
+  <a href="index-en.html#method">Method</a>
+  <a href="index-en.html#about">About</a>
+  <a href="index-en.html#contact" class="nav-cta">Contact</a>
+  <div class="nav-lang">
+    <a href="enac.html" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+    <span class="sep">/</span>
+    <a href="enac-en.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+  </div>
+</div>
+
+<main>
+<!-- ETUDE: SIMULATEUR DE VOL -->
+<section class="study" style="padding-top:140px;">
+  <a href="index-en.html#work" class="study__back"><span class="c-purple">‹</span> Back to projects</a>
+  <div data-reveal class="study__header">
+    <span class="project-row__num c-purple">09</span>
+    <span class="mono-label">ENAC · MASTER'S IN HCI</span>
+  </div>
+  <h1 data-reveal class="study__title">Supervision station for flight simulator</h1>
+  <p data-reveal class="study__subtitle">Giving instructors realistic aerial context, designed for non-experts.</p>
+
+  <div class="tldr">
+    <span class="tldr__label">TL;DR</span>
+    <p class="tldr__text">Designing a supervision station for flight instructors (ENAC). Primary decision: a compact horizontal timeline to track ATC events without stealing space from the radar view. Secondary decision: reusing the Navigation Display known to instructors rather than inventing an interaction mode.</p>
+  </div>
+
+  <div data-reveal class="study__meta">
+    <div class="study__meta-item"><label>Role</label><span>Technical lead, user-centered design (team of 4)</span></div>
+    <div class="study__meta-item"><label>Setting</label><span>Masterpiece project, Master's in HCI, Paul Sabatier University &amp; ENAC</span></div>
+    <div class="study__meta-item"><label>Client</label><span>ENAC (pilot training)</span></div>
+    <div class="study__meta-item"><label>Domain</label><span>Aeronautics, air traffic control, speech synthesis</span></div>
+  </div>
+
+  <div data-reveal class="study__image" style="aspect-ratio:16/9;">
+    <img src="assets/images/simu/simu-poster.jpg" alt="Project synthesis poster" style="object-fit:cover;" loading="lazy">
+    <span class="study__image-label">SYNTHESIS POSTER</span>
+  </div>
+  <p data-reveal class="study__caption">The masterpiece poster, a synthesis of the project presented at ENAC.</p>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
+    <p>Flight simulators offered no aerial context: communications with ATC and exchanges between ATC and other aircraft in the sector were absent. Pilots only discovered them in real flight. The challenge was to add this context (realistic ATC messages and vocal environment) while keeping the tool usable for an instructor already leading the session, without assuming they master aeronautical phraseology.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">WHAT I DID</div>
+    <p>A user-centered approach in two iterations, grounded in fieldwork and state of the art.</p>
+    <ul class="study__list">
+      <li><strong>Observed two real sessions</strong> with a DFPV instructor, from a simple situation to a heavily loaded end-of-cycle simulation.</li>
+      <li><strong>Analyzed the state of the art</strong>, including the IIPP (Innovative Pseudo-Piloting Interface) designed by ENAC research. We studied it to pinpoint what was missing, without copying it: our user and our needs were different.</li>
+      <li><strong>Formalized the needs</strong> based on a real go-around scenario, then low-fidelity prototyped several representations, tested them with clients, before arriving at high-fidelity mockups.</li>
+    </ul>
+  </div>
+
+  <div data-reveal class="gallery" style="margin-bottom:44px;">
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-phases-controle.png" alt="ATC phases" loading="lazy">
+      <p class="gallery__caption">ATC phases</p>
+      <p class="gallery__desc">Upstream study of air traffic control phases.</p>
+    </div>
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-maquette-papier.png" alt="Paper mockups" loading="lazy">
+      <p class="gallery__caption">Paper prototypes</p>
+      <p class="gallery__desc">Circular vs. horizontal timeline, tested with clients.</p>
+    </div>
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-maquette-nd.png" alt="High fidelity ND mockup" loading="lazy">
+      <p class="gallery__caption">Navigation Display view</p>
+      <p class="gallery__desc">Direct manipulation of aircraft via the ND familiar to instructors.</p>
+    </div>
+    <div class="gallery__item">
+      <img src="assets/images/simu/simu-maquette-carte.png" alt="Map view mockup" loading="lazy">
+      <p class="gallery__caption">Aircraft-centered map view</p>
+      <p class="gallery__desc">Traffic overview with the timeline at the bottom.</p>
+    </div>
+  </div>
+
+  <div data-reveal class="arbitrage">
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <h3 class="arbitrage__title">Tracking events without stealing space from the radar view</h3>
+    <p>The core of the interface: how does the instructor view and trigger exercise events while keeping an eye on the traffic? We prototyped several temporal representations. The circular timeline, inspired by a clock, was elegant but took too much space at the expense of the radar view. A path combining horizontal and vertical timelines simultaneously was discarded due to cognitive load.</p>
+    <p>I opted for a <em>compact horizontal timeline at the bottom of the screen</em>, where each block summarizes a message by the speaker's name, with a color code distinguishing the current frequency from others. A click triggers the audio message via speech synthesis. The rule that guided these choices: preserve the radar view and limit cognitive load.</p>
+  </div>
+
+  <div data-reveal class="study__block" style="margin-top:36px;">
+    <div class="mono-label--sm" style="margin-bottom:14px;">SECOND DECISION</div>
+    <h3 style="margin:0 0 14px; font-size:20px; font-weight:600;">Reusing a known reference point</h3>
+    <p>To manipulate traffic aircraft, rather than inventing an interaction mode, we integrated a Navigation Display (ND), the screen instructors already know from the cockpit. The low learning cost and efficiency of direct manipulation took precedence over originality. Start from what the user already knows.</p>
+  </div>
+
+  <div data-reveal class="study__block">
+    <div class="mono-label--sm" style="margin-bottom:14px;">THE OUTCOME</div>
+    <p>The masterpiece resulted in a demonstrable prototype of the supervision station, and most importantly, the specification of needs and key elements to make a simulation more realistic. It was designed as a prelude to research work at ENAC. For me, it's the foundational project in interaction design: understanding a demanding profession before drawing, observing real usage, and balancing density against cognitive load on a critical interface.</p>
+  </div>
+
+  <a href="index-en.html#work" class="study-next">
+    <span class="study-next__label">BACK</span>
+    <span style="display:flex; align-items:center; gap:14px;"><span class="study-next__title">View all projects</span><span class="study-next__arrow">→</span></span>
+  </a>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+<script src="transition.js" defer></script>
+<script src="study-extras.js" defer></script>
+</body>
+</html>

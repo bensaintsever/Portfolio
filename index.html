@@ -34,13 +34,24 @@
   <script>
     (function() {
       try {
+        // An explicit ?lang=… in the URL always wins and is fully reliable,
+        // independent of localStorage timing (the real fix for the toggle).
+        var urlLang = new URLSearchParams(location.search).get('lang');
+        if (urlLang) {
+          localStorage.setItem('portfolio_lang', urlLang);
+          if (urlLang === 'en') { window.location.replace('index-en.html'); return; }
+          return; // urlLang === 'fr' → stay here
+        }
         var userLang = localStorage.getItem('portfolio_lang');
         if (!userLang) {
           var browserLang = navigator.language || navigator.userLanguage;
           if (browserLang && !browserLang.toLowerCase().startsWith('fr')) {
             window.location.replace('index-en.html');
+            return;
           }
         }
+        // On the FR page: remember it so we never force-redirect again.
+        localStorage.setItem('portfolio_lang', 'fr');
       } catch(e) {}
     })();
   </script>
@@ -63,9 +74,9 @@
       <a href="#about">À propos</a>
       <a href="#contact" class="nav-cta">Contact</a>
       <div class="nav-lang">
-        <a href="index.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+        <a href="index.html?lang=fr" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
         <span class="sep">/</span>
-        <a href="index-en.html" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+        <a href="index-en.html?lang=en" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
       </div>
     </div>
     <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
@@ -80,9 +91,9 @@
     <a href="#about">À propos</a>
     <a href="#contact" class="nav-cta">Contact</a>
     <div class="nav-lang">
-      <a href="index.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+      <a href="index.html?lang=fr" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
       <span class="sep">/</span>
-      <a href="index-en.html" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+      <a href="index-en.html?lang=en" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
     </div>
   </div>
 
@@ -319,7 +330,7 @@
     <a id="mail" href="https://www.linkedin.com/in/benjaminsaintsever/" data-reveal class="contact__mail"><span id="mailtext">écrivez-moi</span> <span
         style="color:var(--c-accent-light);">→</span></a>
     <div data-reveal>
-      <a href="#" data-cv download class="btn-cv">Télécharger le CV</a>
+      <a href="assets/cv/CV-Benjamin-Saint-Sever-Product-Designer-FR.pdf" data-cv download class="btn-cv">Télécharger le CV</a>
     </div>
     <div data-reveal class="contact__socials">
       <a href="https://www.linkedin.com/in/benjaminsaintsever/">LinkedIn</a>

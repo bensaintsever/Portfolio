@@ -7,6 +7,22 @@
 <title>Simulateur de vol · Benjamin Saint-Sever</title>
 <meta name="description" content="Étude de cas : poste de supervision pour simulateur de vol, conçu pour les instructeurs de l'ENAC. Design d'interaction sur interface critique.">
 <meta name="theme-color" content="#9a7cff">
+<!-- Canonical & langues -->
+<link rel="canonical" href="https://bensaintsever.github.io/Portfolio/enac.html">
+<link rel="alternate" hreflang="fr" href="https://bensaintsever.github.io/Portfolio/enac.html">
+<link rel="alternate" hreflang="en" href="https://bensaintsever.github.io/Portfolio/enac-en.html">
+<link rel="alternate" hreflang="x-default" href="https://bensaintsever.github.io/Portfolio/enac.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Simulateur de vol · Benjamin Saint-Sever">
+<meta property="og:description" content="Étude de cas : poste de supervision pour simulateur de vol, conçu pour les instructeurs de l'ENAC. Design d'interaction sur interface critique.">
+<meta property="og:image" content="https://bensaintsever.github.io/Portfolio/assets/images/og-cover.png">
+<meta property="og:url" content="https://bensaintsever.github.io/Portfolio/enac.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bensaintsever.github.io/Portfolio/assets/images/og-cover.png">
+
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +45,11 @@
     <a href="index.html#method">Méthode</a>
     <a href="index.html#about">À propos</a>
     <a href="index.html#contact" class="nav-cta">Contact</a>
+    <div class="nav-lang">
+      <a href="enac.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+      <span class="sep">/</span>
+      <a href="enac-en.html" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+    </div>
   </div>
   <button class="nav-hamburger" aria-label="Menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -40,6 +61,11 @@
   <a href="index.html#method">Méthode</a>
   <a href="index.html#about">À propos</a>
   <a href="index.html#contact" class="nav-cta">Contact</a>
+  <div class="nav-lang">
+    <a href="enac.html" class="is-active" onclick="localStorage.setItem('portfolio_lang', 'fr');">FR</a>
+    <span class="sep">/</span>
+    <a href="enac-en.html" onclick="localStorage.setItem('portfolio_lang', 'en');">EN</a>
+  </div>
 </div>
 
 <main>
@@ -63,10 +89,11 @@
     <div class="study__meta-item"><label>Cadre</label><span>Chef d'œuvre, Master 2 IHM, Université Paul Sabatier &amp; ENAC</span></div>
     <div class="study__meta-item"><label>Client</label><span>ENAC (formation des pilotes)</span></div>
     <div class="study__meta-item"><label>Domaine</label><span>Aéronautique, contrôle aérien, synthèse vocale</span></div>
+    <div class="study__meta-item"><label>Période</label><span>2017–2018</span></div>
   </div>
 
   <div data-reveal class="study__image" style="aspect-ratio:16/9;">
-    <img src="assets/images/simu/simu-poster.jpg" alt="Poster de synthèse du projet" style="object-fit:cover;" loading="lazy">
+    <img src="assets/images/simu/simu-poster.webp" alt="Poster de synthèse du projet" style="object-fit:cover;" loading="lazy">
     <span class="study__image-label">POSTER DE SYNTHÈSE</span>
   </div>
   <p data-reveal class="study__caption">Le poster du chef d'œuvre, synthèse du projet présenté à l'ENAC.</p>
@@ -88,22 +115,22 @@
 
   <div data-reveal class="gallery" style="margin-bottom:44px;">
     <div class="gallery__item">
-      <img src="assets/images/simu/simu-phases-controle.png" alt="Phases du contrôle aérien" loading="lazy">
+      <img src="assets/images/simu/simu-phases-controle.webp" alt="Phases du contrôle aérien" loading="lazy">
       <p class="gallery__caption">Phases du contrôle</p>
       <p class="gallery__desc">Étude amont des phases du contrôle aérien.</p>
     </div>
     <div class="gallery__item">
-      <img src="assets/images/simu/simu-maquette-papier.png" alt="Maquettes papier" loading="lazy">
+      <img src="assets/images/simu/simu-maquette-papier.webp" alt="Maquettes papier" loading="lazy">
       <p class="gallery__caption">Prototypes papier</p>
       <p class="gallery__desc">Timeline circulaire vs. horizontale, confrontées aux clients.</p>
     </div>
     <div class="gallery__item">
-      <img src="assets/images/simu/simu-maquette-nd.png" alt="Maquette haute-fidélité ND" loading="lazy">
+      <img src="assets/images/simu/simu-maquette-nd.webp" alt="Maquette haute-fidélité ND" loading="lazy">
       <p class="gallery__caption">Vue Navigation Display</p>
       <p class="gallery__desc">Manipulation directe des avions via le ND connu des instructeurs.</p>
     </div>
     <div class="gallery__item">
-      <img src="assets/images/simu/simu-maquette-carte.png" alt="Maquette vue carte" loading="lazy">
+      <img src="assets/images/simu/simu-maquette-carte.webp" alt="Maquette vue carte" loading="lazy">
       <p class="gallery__caption">Vue carte centrée avion</p>
       <p class="gallery__desc">Vue d'ensemble du trafic avec la timeline en bas.</p>
     </div>
@@ -131,6 +158,17 @@
     <span class="study-next__label">RETOUR</span>
     <span style="display:flex; align-items:center; gap:14px;"><span class="study-next__title">Voir tous les projets</span><span class="study-next__arrow">→</span></span>
   </a>
+</section>
+
+<!-- CTA CONTACT (fin d'étude) -->
+<section class="study study-cta">
+  <div data-reveal class="mono-label" style="margin-bottom:22px;">CONTACT</div>
+  <h2 data-reveal class="study-cta__title">Un poste, un projet ?<br>Parlons-en<span class="dot">.</span></h2>
+  <a id="mail" href="https://www.linkedin.com/in/benjaminsaintsever/" data-reveal class="contact__mail"><span id="mailtext">écrivez-moi</span> <span style="color:var(--c-accent-light);">→</span></a>
+  <div data-reveal class="study-cta__actions">
+    <a href="assets/cv/CV-Benjamin-Saint-Sever-Product-Designer-FR.pdf" data-cv download class="btn-cv">Télécharger le CV</a>
+    <a href="https://www.linkedin.com/in/benjaminsaintsever/" class="study-cta__social">LinkedIn</a>
+  </div>
 </section>
 </main>
 

@@ -6,6 +6,16 @@
    Loaded only on detail pages (hustle-up / ibat / enac).
    ============================================================ */
 (function () {
+  // --- Email reveal (même mécanique anti-spam que main.js) ---
+  // The link ships with a LinkedIn fallback href so it always works,
+  // even if this script is blocked or fails to load. JS upgrades it to mailto.
+  var mail = document.getElementById('mail'), mailtext = document.getElementById('mailtext');
+  if (mail && mailtext) {
+    var u = 'saintseverbenjamin', d = 'gmail.com';
+    mail.href = 'mailto:' + u + '@' + d;
+    mailtext.textContent = u + '@' + d;
+  }
+
   // --- Reading progress bar ---
   var bar = document.createElement('div');
   bar.id = 'read-progress';

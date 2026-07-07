@@ -1134,3 +1134,30 @@ body:has(.subnav) .nav {
   .arbitrage { padding-left: 18px; }
   .contact__footer { flex-direction: column; align-items: center; text-align: center; }
 }
+
+/* --- STUDY CTA (fin de page d'étude) --- */
+.study-cta { text-align: center; border-top: 1px solid var(--c-border-subtle); }
+.study-cta__title {
+  margin: 0 0 36px;
+  font-size: clamp(30px, 5vw, 58px);
+  font-weight: 600;
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+.study-cta__title .dot { color: var(--c-accent); }
+.study-cta__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+.study-cta__social {
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+}
+.study-cta__social:hover { color: var(--c-text); }

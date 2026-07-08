@@ -12,9 +12,20 @@
    the arrival cover before first paint.
    ============================================================ */
 (function () {
+  // Reduced motion : aucun carton, aucune interception. Les ancres et les
+  // liens se comportent nativement (le CSS force déjà scroll-behavior auto).
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
   var DUR_IN = 0.6, DUR_HOLD = 0.45, DUR_OUT = 0.7, EASE = 'power3.inOut';
   var SCROLL_OFFSET = 112;
   var STORE_KEY = 'ptr-transition';
+
+  // Après le premier carton de la session, version raccourcie : l'effet
+  // signature reste, sans taxer la navigation répétée. Le hold est calibré
+  // pour laisser lire l'intitulé affiché sur le carton.
+  var FAST = { in: 0.5, hold: 0.32, out: 0.55 };
+  function hasSeen() { try { return sessionStorage.getItem('ptr-seen') === '1'; } catch (e) { return false; } }
+  function markSeen() { try { sessionStorage.setItem('ptr-seen', '1'); } catch (e) {} }
 
   // Destination registry: per target page file, its accent + kicker + studies.
   // Shared with the head-guard via window.PTR_DEST (defined inline in <head>).
@@ -108,9 +119,13 @@
         var target = incoming.hash ? document.getElementById(incoming.hash) : null;
         if (target) { jumpTo(target); revealNow(gsap, target); }
         document.documentElement.classList.remove('ptr-arriving');
+        document.documentElement.style.backgroundColor = '';
+        // Même tempo que le départ de cette navigation (flag passé dans le payload).
+        var fast = !!incoming.fast;
+        markSeen();
         ptl = gsap.timeline({ onComplete: function () { animating = false; } });
-        ptl.to({}, { duration: DUR_HOLD })
-          .to(ov, { yPercent: -100, duration: DUR_OUT, ease: EASE })
+        ptl.to({}, { duration: fast ? FAST.hold : DUR_HOLD })
+          .to(ov, { yPercent: -100, duration: fast ? FAST.out : DUR_OUT, ease: EASE })
           .set(ov, { yPercent: 100, pointerEvents: 'none' });
       });
     } else {
@@ -122,15 +137,17 @@
       var target = document.getElementById(hash);
       if (!target || animating) return;
       animating = true;
+      var fast = hasSeen();
+      markSeen();
       var dest = DEST[CURRENT] || {};
       paintCard(dest, (dest.map && dest.map[hash]) || {});
       if (ptl) ptl.kill();
       ptl = gsap.timeline({ onComplete: function () { animating = false; } });
       ptl.set(ov, { yPercent: 100, pointerEvents: 'auto' })
-        .to(ov, { yPercent: 0, duration: DUR_IN, ease: EASE })
+        .to(ov, { yPercent: 0, duration: fast ? FAST.in : DUR_IN, ease: EASE })
         .add(function () { jumpTo(target); revealNow(gsap, target); })
-        .to({}, { duration: DUR_HOLD })
-        .to(ov, { yPercent: -100, duration: DUR_OUT, ease: EASE })
+        .to({}, { duration: fast ? FAST.hold : DUR_HOLD })
+        .to(ov, { yPercent: -100, duration: fast ? FAST.out : DUR_OUT, ease: EASE })
         .set(ov, { yPercent: 100, pointerEvents: 'none' });
     }
 
@@ -138,16 +155,18 @@
     function goInter(href, file, hash) {
       if (animating) return;
       animating = true;
+      var fast = hasSeen();
       var dest = DEST[file] || { color: '#2b3cf0', kicker: '' };
       var info = (hash && dest.map && dest.map[hash]) || {};
       paintCard(dest, info);
       try {
-        sessionStorage.setItem(STORE_KEY, JSON.stringify({ n: info.n || '', t: info.t || '', hash: hash || '' }));
+        // fast est transmis pour que l'arrivée garde le tempo du départ.
+        sessionStorage.setItem(STORE_KEY, JSON.stringify({ n: info.n || '', t: info.t || '', hash: hash || '', fast: fast }));
       } catch (e) {}
       if (ptl) ptl.kill();
       ptl = gsap.timeline();
       ptl.set(ov, { yPercent: 100, pointerEvents: 'auto' })
-        .to(ov, { yPercent: 0, duration: DUR_IN, ease: EASE })
+        .to(ov, { yPercent: 0, duration: fast ? FAST.in : DUR_IN, ease: EASE })
         .add(function () { window.location.href = href; });
     }
 

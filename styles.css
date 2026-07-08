@@ -148,8 +148,13 @@ html.ptr-arriving #ptr {
   line-height: 1;
   color: #0a0a0b;
 }
-/* Anti-FOUC: when arriving under a curtain, hide page until JS lifts it */
+/* Anti-FOUC: when arriving under a curtain, hide page until JS lifts it.
+   Le contenu est masqué dès le premier rendu (le carton n'est monté qu'au
+   DOMContentLoaded : sans ceci, la page peut flasher un instant avant).
+   Le fond de <html> est peint à la couleur du carton par ptr-head-guard. */
 html.ptr-arriving { scroll-behavior: auto !important; }
+html.ptr-arriving body { visibility: hidden; }
+html.ptr-arriving #ptr { visibility: visible; }
 
 /* --- RESET & BASE --- */
 *, *::before, *::after { box-sizing: border-box; }

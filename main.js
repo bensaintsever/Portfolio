@@ -57,7 +57,12 @@
       it.y += (it.ty - it.y) * 0.14;
       it.el.style.transform = 'translate(' + it.x.toFixed(2) + 'px,' + it.y.toFixed(2) + 'px)';
     }
-    if (ambient) { ax += (amTx - ax) * 0.06; ay += (amTy - ay) * 0.06; ambient.style.left = ax + 'px'; ambient.style.top = ay + 'px'; }
+    if (ambient) {
+      ax += (amTx - ax) * 0.06; ay += (amTy - ay) * 0.06;
+      // transform (pas left/top) : ne déclenche pas de layout, donc pas de CLS
+      var adx = ax - window.innerWidth / 2, ady = ay - window.innerHeight * 0.5;
+      ambient.style.transform = 'translate(calc(-50% + ' + adx.toFixed(1) + 'px), calc(-50% + ' + ady.toFixed(1) + 'px))';
+    }
     if (cursor) { cx += (mx - cx) * 0.2; cy += (my - cy) * 0.2; cursor.style.left = cx + 'px'; cursor.style.top = cy + 'px'; }
     if (mx < 0 && ambient) {
       var t = performance.now() * 0.0004;

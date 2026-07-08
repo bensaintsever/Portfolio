@@ -57,6 +57,25 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Replis à métriques ajustées : le texte en police système occupe la même
+   place que la webfont, donc aucun décalage de mise en page au swap (CLS) */
+@font-face {
+  font-family: 'Space Grotesk Fallback';
+  src: local('Arial');
+  size-adjust: 112.94%;
+  ascent-override: 87.12%;
+  descent-override: 25.85%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Space Mono Fallback';
+  src: local('Courier New');
+  size-adjust: 101.98%;
+  ascent-override: 109.82%;
+  descent-override: 35.40%;
+  line-gap-override: 0%;
+}
+
 /* ============================================================
    PORTFOLIO — Benjamin Saint-Sever
    ============================================================ */
@@ -138,7 +157,7 @@ html, body { margin: 0; padding: 0; background: #0a0a0b; }
 body {
   cursor: none;
   color: #f2f2f0;
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-family: 'Space Grotesk', 'Space Grotesk Fallback', system-ui, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -202,7 +221,7 @@ figure { margin: 0; }
   --c-orange: #e0913b;
   --c-red: #e0564e;
   --c-purple: #9a7cff;
-  --font-mono: 'Space Mono', monospace;
+  --font-mono: 'Space Mono', 'Space Mono Fallback', monospace;
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 14px;

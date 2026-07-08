@@ -195,12 +195,48 @@
     </ul>
   </div>
 
-  <figure data-reveal style="margin:0 0 16px;">
+  <figure data-reveal class="spec-figure" style="--spec-accent:var(--c-green-light); margin:0 0 16px;">
     <div class="study__image" style="aspect-ratio:16/9;">
       <img src="assets/images/hustle-ds/tokens-themes.webp" alt="Semantic token architecture by theme" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+      <span class="spec-marker" style="left:4%; top:12%;" data-spec="1" aria-hidden="true">01</span>
+      <span class="spec-marker" style="left:34%; top:7.5%;" data-spec="2" aria-hidden="true">02</span>
+      <span class="spec-marker" style="left:21%; top:15%;" data-spec="3" aria-hidden="true">03</span>
+      <span class="spec-marker" style="left:4%; top:60%;" data-spec="4" aria-hidden="true">04</span>
     </div>
-    <figcaption class="study__caption">Semantic tokens, applied theme by theme.</figcaption>
+    <ol class="spec-legend">
+      <li data-spec="1"><span class="spec-legend__num">01</span><span>Three separate collections: global colors at the base, the semantic layer (Theme) on top.</span></li>
+      <li data-spec="2"><span class="spec-legend__num">02</span><span>One theme per column: the same token points to a different value, without touching the component.</span></li>
+      <li data-spec="3"><span class="spec-legend__num">03</span><span>Intent-based names (interactive / background / primary), never a color: the theme decides.</span></li>
+      <li data-spec="4"><span class="spec-legend__num">04</span><span>Organized by role (surface, interactive, feedback): the shared language between design and code.</span></li>
+    </ol>
+    <figcaption class="study__caption" style="margin-top:12px;">Semantic tokens, applied theme by theme.</figcaption>
   </figure>
+
+  <div data-reveal style="margin:8px 0 44px;">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LIVE · TOKEN INSPECTOR</div>
+    <div class="tok-demo">
+      <div class="tok-demo__stage">
+        <div class="tok-demo__themes">
+          <button type="button" class="tok-chip is-active" data-theme="athlete-light">Athlete Light</button>
+          <button type="button" class="tok-chip" data-theme="athlete-dark">Athlete Dark</button>
+          <button type="button" class="tok-chip" data-theme="owner">Owner</button>
+          <button type="button" class="tok-chip" data-theme="coach">Coach</button>
+        </div>
+        <div class="tok-demo__canvas" data-tok-target="surface">
+          <button type="button" class="tok-demo__button" data-tok-target="bg"><span data-tok-target="text">Button</span> <span data-tok-target="text" aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <div class="tok-demo__panel">
+        <div class="tok-demo__panel-title">INSPECT · CONSUMED TOKENS</div>
+        <ul>
+          <li data-tok="bg"><code>interactive/background/primary</code><span class="tok-demo__val"><i class="tok-swatch"></i><span data-val="bg"></span></span></li>
+          <li data-tok="text"><code>interactive/text/on-primary</code><span class="tok-demo__val"><i class="tok-swatch"></i><span data-val="text"></span></span></li>
+          <li data-tok="surface"><code>surface/background/default</code><span class="tok-demo__val"><i class="tok-swatch"></i><span data-val="surface"></span></span></li>
+        </ul>
+        <p class="tok-demo__note">The button only references roles. Switch themes: its values follow, its code doesn't change. Hover a token to see what it paints.</p>
+      </div>
+    </div>
+  </div>
 
   <div data-reveal class="arbitrage">
     <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
@@ -329,11 +365,23 @@
     <div class="study__meta-item"><label>Period</label><span>late 2024</span></div>
   </div>
 
-  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
-    <img src="assets/images/hustle-dashboard/dashboard-owner.webp" alt="Main view of the gym owner dashboard" style="object-fit:cover; object-position:top;" loading="lazy">
-    <span class="study__image-label">OWNER DASHBOARD</span>
-  </div>
-  <p data-reveal class="study__caption">The owner's management view, dense but readable.</p>
+  <figure data-reveal class="spec-figure" style="--spec-accent:var(--c-green-light); margin:0;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/hustle-dashboard/dashboard-owner.webp" alt="Main view of the gym owner dashboard" style="object-fit:cover; object-position:top;" loading="lazy">
+      <span class="study__image-label">OWNER DASHBOARD</span>
+      <span class="spec-marker" style="left:7%; top:15%;" data-spec="1" aria-hidden="true">01</span>
+      <span class="spec-marker" style="left:54%; top:15%;" data-spec="2" aria-hidden="true">02</span>
+      <span class="spec-marker" style="left:54%; top:46%;" data-spec="3" aria-hidden="true">03</span>
+      <span class="spec-marker" style="left:7%; top:87%;" data-spec="4" aria-hidden="true">04</span>
+    </div>
+    <ol class="spec-legend">
+      <li data-spec="1"><span class="spec-legend__num">01</span><span>The day's schedule: each block is a synthesis (slots, trials, drop-ins), never an exhaustive table.</span></li>
+      <li data-spec="2"><span class="spec-legend__num">02</span><span>Weekly trials and drop-ins: the direct answer to "where do I act today?".</span></li>
+      <li data-spec="3"><span class="spec-legend__num">03</span><span>Member engagement as a trend; the full list stays one click away, not in view.</span></li>
+      <li data-spec="4"><span class="spec-legend__num">04</span><span>The KPI and finance section: visible here for the owner, gated by the financial role for others.</span></li>
+    </ol>
+  </figure>
+  <p data-reveal class="study__caption">The owner's management view, dense but readable: each marker is a decision, not a feature.</p>
 
   <div data-reveal class="study__block">
     <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>

@@ -195,12 +195,48 @@
     </ul>
   </div>
 
-  <figure data-reveal style="margin:0 0 16px;">
+  <figure data-reveal class="spec-figure" style="--spec-accent:var(--c-green-light); margin:0 0 16px;">
     <div class="study__image" style="aspect-ratio:16/9;">
       <img src="assets/images/hustle-ds/tokens-themes.webp" alt="Architecture des tokens sémantiques par thème" style="object-fit:contain; background:#f4f4f2;" loading="lazy">
+      <span class="spec-marker" style="left:4%; top:12%;" data-spec="1" aria-hidden="true">01</span>
+      <span class="spec-marker" style="left:34%; top:7.5%;" data-spec="2" aria-hidden="true">02</span>
+      <span class="spec-marker" style="left:21%; top:15%;" data-spec="3" aria-hidden="true">03</span>
+      <span class="spec-marker" style="left:4%; top:60%;" data-spec="4" aria-hidden="true">04</span>
     </div>
-    <figcaption class="study__caption">Les tokens sémantiques, déclinés thème par thème.</figcaption>
+    <ol class="spec-legend">
+      <li data-spec="1"><span class="spec-legend__num">01</span><span>Trois collections séparées : les couleurs globales à la base, la couche sémantique (Theme) au-dessus.</span></li>
+      <li data-spec="2"><span class="spec-legend__num">02</span><span>Un thème par colonne : le même token pointe vers une autre valeur, sans toucher au composant.</span></li>
+      <li data-spec="3"><span class="spec-legend__num">03</span><span>Des noms d'intention (interactive / background / primary), jamais une couleur : c'est le thème qui décide.</span></li>
+      <li data-spec="4"><span class="spec-legend__num">04</span><span>Rangés par rôle (surface, interactive, feedback) : le langage commun entre design et code.</span></li>
+    </ol>
+    <figcaption class="study__caption" style="margin-top:12px;">Les tokens sémantiques, déclinés thème par thème.</figcaption>
   </figure>
+
+  <div data-reveal style="margin:8px 0 44px;">
+    <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">EN DIRECT · INSPECTEUR DE TOKENS</div>
+    <div class="tok-demo">
+      <div class="tok-demo__stage">
+        <div class="tok-demo__themes">
+          <button type="button" class="tok-chip is-active" data-theme="athlete-light">Athlete Light</button>
+          <button type="button" class="tok-chip" data-theme="athlete-dark">Athlete Dark</button>
+          <button type="button" class="tok-chip" data-theme="owner">Owner</button>
+          <button type="button" class="tok-chip" data-theme="coach">Coach</button>
+        </div>
+        <div class="tok-demo__canvas" data-tok-target="surface">
+          <button type="button" class="tok-demo__button" data-tok-target="bg"><span data-tok-target="text">Button</span> <span data-tok-target="text" aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <div class="tok-demo__panel">
+        <div class="tok-demo__panel-title">INSPECT · TOKENS CONSOMMÉS</div>
+        <ul>
+          <li data-tok="bg"><code>interactive/background/primary</code><span class="tok-demo__val"><i class="tok-swatch"></i><span data-val="bg"></span></span></li>
+          <li data-tok="text"><code>interactive/text/on-primary</code><span class="tok-demo__val"><i class="tok-swatch"></i><span data-val="text"></span></span></li>
+          <li data-tok="surface"><code>surface/background/default</code><span class="tok-demo__val"><i class="tok-swatch"></i><span data-val="surface"></span></span></li>
+        </ul>
+        <p class="tok-demo__note">Le bouton ne référence que des rôles. Changez de thème : ses valeurs suivent, son code ne bouge pas. Survolez un token pour voir ce qu'il peint.</p>
+      </div>
+    </div>
+  </div>
 
   <div data-reveal class="arbitrage">
     <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
@@ -329,11 +365,23 @@
     <div class="study__meta-item"><label>Période</label><span>fin 2024</span></div>
   </div>
 
-  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
-    <img src="assets/images/hustle-dashboard/dashboard-owner.webp" alt="Vue principale du dashboard gym owner" style="object-fit:cover; object-position:top;" loading="lazy">
-    <span class="study__image-label">DASHBOARD OWNER</span>
-  </div>
-  <p data-reveal class="study__caption">La vue de pilotage de l'owner, dense mais lisible.</p>
+  <figure data-reveal class="spec-figure" style="--spec-accent:var(--c-green-light); margin:0;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/hustle-dashboard/dashboard-owner.webp" alt="Vue principale du dashboard gym owner" style="object-fit:cover; object-position:top;" loading="lazy">
+      <span class="study__image-label">DASHBOARD OWNER</span>
+      <span class="spec-marker" style="left:7%; top:15%;" data-spec="1" aria-hidden="true">01</span>
+      <span class="spec-marker" style="left:54%; top:15%;" data-spec="2" aria-hidden="true">02</span>
+      <span class="spec-marker" style="left:54%; top:46%;" data-spec="3" aria-hidden="true">03</span>
+      <span class="spec-marker" style="left:7%; top:87%;" data-spec="4" aria-hidden="true">04</span>
+    </div>
+    <ol class="spec-legend">
+      <li data-spec="1"><span class="spec-legend__num">01</span><span>Le planning du jour : chaque bloc est une synthèse (créneaux, essais, drop-in), jamais un tableau exhaustif.</span></li>
+      <li data-spec="2"><span class="spec-legend__num">02</span><span>Essais et drop-in de la semaine : la réponse directe à « où dois-je agir aujourd'hui ? ».</span></li>
+      <li data-spec="3"><span class="spec-legend__num">03</span><span>L'engagement des membres en tendance ; la liste complète reste à un clic, pas sous les yeux.</span></li>
+      <li data-spec="4"><span class="spec-legend__num">04</span><span>La section KPI et finance : visible ici de l'owner, cadrée par le rôle financial pour les autres.</span></li>
+    </ol>
+  </figure>
+  <p data-reveal class="study__caption">La vue de pilotage de l'owner, dense mais lisible : chaque repère marque une décision, pas une feature.</p>
 
   <div data-reveal class="study__block">
     <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>

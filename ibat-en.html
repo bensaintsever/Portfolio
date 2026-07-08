@@ -197,10 +197,22 @@
     <div class="study__meta-item"><label>Period</label><span>2018–2022</span></div>
   </div>
 
-  <div data-reveal class="study__image" style="aspect-ratio:16/10;">
-    <img src="assets/images/ibat-scan/scan-modale-retenue.webp" alt="Retained quote scanning modal" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
-    <span class="study__image-label">MODAL RETAINED AFTER TEST</span>
-  </div>
+  <figure data-reveal class="spec-figure" style="--spec-accent:var(--c-red); margin:0;">
+    <div class="study__image" style="aspect-ratio:16/10;">
+      <img src="assets/images/ibat-scan/scan-modale-retenue.webp" alt="Retained quote scanning modal" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
+      <span class="study__image-label">MODAL RETAINED AFTER TEST</span>
+      <span class="spec-marker" style="left:4%; top:20%;" data-spec="1" aria-hidden="true">01</span>
+      <span class="spec-marker" style="left:6%; top:34%;" data-spec="2" aria-hidden="true">02</span>
+      <span class="spec-marker" style="left:36%; top:45%;" data-spec="3" aria-hidden="true">03</span>
+      <span class="spec-marker" style="left:79%; top:82%;" data-spec="4" aria-hidden="true">04</span>
+    </div>
+    <ol class="spec-legend">
+      <li data-spec="1"><span class="spec-legend__num">01</span><span>The modal isolates the task: the dense cart context steps back during the critical action.</span></li>
+      <li data-spec="2"><span class="spec-legend__num">02</span><span>The scanned quote stays in view: items are checked, not retyped.</span></li>
+      <li data-spec="3"><span class="spec-legend__num">03</span><span>Each recognized line is validated one by one (reference, quantity, price) before ordering.</span></li>
+      <li data-spec="4"><span class="spec-legend__num">04</span><span>A single exit: add to cart. This is the version the SUS test settled.</span></li>
+    </ol>
+  </figure>
   <p data-reveal class="study__caption">The modal version, retained after comparison in user testing.</p>
 
   <div data-reveal class="study__block">

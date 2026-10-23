@@ -136,7 +136,7 @@
   </div>
 
   <div data-reveal class="arbitrage" style="border-left-color:var(--c-orange);">
-    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE CALL I MADE</div>
     <h3 class="arbitrage__title">A single core for all clients</h3>
     <p>Selling the product as a white label made it tempting to adapt each screen for each client on a case-by-case basis. The problem is that as clients are added, this custom work becomes impossible to maintain. I established the opposite approach: a design system of generic rules, table models, forms, and navigation valid everywhere, upon which each client's identity is applied without altering the structure. Consistency comes from the system, not from repeated screen-by-screen work.</p>
     <p>This choice requires more upfront effort, but it's what makes white-labeling sustainable: a single core to maintain, client adaptations that don't weaken it, and a reusable base beyond just this product.</p>
@@ -233,7 +233,7 @@
   </figure>
 
   <div data-reveal class="arbitrage" style="border-left-color:var(--c-red);">
-    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE CALL I MADE</div>
     <h3 class="arbitrage__title">Isolating the critical task in a modal</h3>
     <p>Rather than deciding by instinct, I prototyped both versions in Adobe XD and Figma, then compared them remotely with two user groups using a SUS questionnaire. Integrated into the cart page, the task became diluted amid too many elements and users struggled to complete it. The modal won precisely because it isolated the action and focused attention solely on what needed to be done. I therefore abandoned the in-page integration in favor of the clearer, more efficient modal.</p>
     <p style="color:var(--c-text); margin-top:14px;"><strong>The principle I retain:</strong> a critical task benefits from being isolated from its context when the environment is dense.</p>
@@ -288,7 +288,7 @@
   </div>
 
   <div data-reveal class="arbitrage">
-    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE CALL I MADE</div>
     <h3 class="arbitrage__title">Designing for the networkless site, not the connected office</h3>
     <p>The simple way to design an ordering app is to assume a permanent connection. On a construction site, this assumption fails. I chose to design around offline mode: preparing and logging an order without a network, then synchronizing once the connection returns.</p>
     <p>It's a structuring constraint that changes the design: thinking about intermediate states, what is saved locally, what syncs, and how the user knows where they stand. This stance comes directly from field observation during research, not from a technical preference.</p>
@@ -314,11 +314,11 @@
     <span class="mono-label">IBAT</span>
   </div>
   <h2 data-reveal class="study__title">Time tracking on site</h2>
-  <p data-reveal class="study__subtitle">Tracking team hours without re-entry, from the field to the office.</p>
+  <p data-reveal class="study__subtitle">Fitting a whole week of time entry onto a phone screen, on a construction site.</p>
 
   <div class="tldr">
     <span class="tldr__label">TL;DR</span>
-    <p class="tldr__text">Replacing pen-and-paper with a single entry closer to the field. Key decision: reconciling information density (weekly view) with direct manipulation (in-cell editing) in the same grid. V2 reworked after user testing.</p>
+    <p class="tldr__text">Replacing pen-and-paper with a single entry closer to the field, on mobile. Key decision: fitting the whole week and its entry onto a phone screen, used standing on a site, without dropping anything needed to clock in correctly. Balance found through iteration and field visits, V2 reworked after user testing.</p>
   </div>
 
   <div data-reveal class="study__meta">
@@ -332,11 +332,12 @@
     <img src="assets/images/ibat-temps/ibat-temps-app.webp" alt="IBAT Temps application" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
     <span class="study__image-label">IBAT TEMPS</span>
   </div>
-  <p data-reveal class="study__caption">The weekly grid: direct entry in the cell.</p>
+  <p data-reveal class="study__caption">The mobile app: the worker's home screen, and the weekly clocking view with direct entry in the cell.</p>
 
   <div data-reveal class="study__block">
     <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">THE PROBLEM</div>
     <p>Hour tracking was done with pen and paper, with later re-entry and no centralization. Hours noted in the field were re-typed later, a source of errors and wasted time, and no one had a reliable consolidated view.</p>
+    <p>Capturing closer to the field meant mobile. That is where the difficulty started: clocking in happens standing on a site, often one-handed, yet it needs a lot of information in one place. Hours per site and per day, absences, equipment rental hours, and behind them the rules that condition the entry: travel zones, meal allowances, the construction collective agreement, plus each client's own configuration.</p>
   </div>
 
   <div data-reveal class="study__block">
@@ -356,10 +357,11 @@
   </figure>
 
   <div data-reveal class="arbitrage">
-    <div class="mono-label--sm" style="margin-bottom:18px;">THE DECISION I DARE MAKE</div>
-    <h3 class="arbitrage__title">Seeing everything at a glance, without giving up fast editing</h3>
-    <p>Tracking hours poses a classic data-rich interface dilemma: to make a decision, you need a dense overview; but to enter data quickly in the field, you need direct editing. Density and direct manipulation pull in opposite directions.</p>
-    <p>I designed the view to reconcile both: a grid that shows the entire week at once, where entry and correction happen directly in the cell, right where the eye is already looking, without opening a separate form. Direct manipulation happens within the density, not beside it.</p>
+    <div class="mono-label--sm" style="margin-bottom:18px;">THE CALL I MADE</div>
+    <h3 class="arbitrage__title">A whole week on a phone screen</h3>
+    <p>Three requirements pulled in different directions. The screen had to stay readable at a glance, carry enough information to clock in correctly, and not slow down an entry made standing up. On a desktop you arbitrate between density and direct manipulation. On a phone, there is not room for both.</p>
+    <p>I designed the view to reconcile them anyway: the entire week at once, where entry and correction happen directly in the cell, right where the eye is already looking, without opening a separate form. Direct manipulation happens within the density, not beside it.</p>
+    <p>I did not get it right the first time. The balance came through successive iterations, fed by field visits to see what was actually consulted and what could stay one tap away.</p>
   </div>
 
   <div data-reveal class="study__block">

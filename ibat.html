@@ -314,11 +314,11 @@
     <span class="mono-label">IBAT</span>
   </div>
   <h2 data-reveal class="study__title">Gestion des temps sur chantier</h2>
-  <p data-reveal class="study__subtitle">Suivre les heures des équipes sans re-saisie, du terrain au bureau.</p>
+  <p data-reveal class="study__subtitle">Faire tenir le pointage d'une semaine sur un écran de téléphone, sur le chantier.</p>
 
   <div class="tldr">
     <span class="tldr__label">TL;DR</span>
-    <p class="tldr__text">Remplacement du papier-crayon par une saisie unique au plus près du terrain. Arbitrage clé : concilier densité d'information (vue semaine) et manipulation directe (édition dans la cellule) dans la même grille. V2 retravaillée après tests utilisateurs.</p>
+    <p class="tldr__text">Remplacement du papier-crayon par une saisie unique au plus près du terrain, sur mobile. Arbitrage clé : faire tenir la semaine entière et sa saisie sur un écran de téléphone, consulté debout sur un chantier, sans rien retirer de ce qu'il faut pour pointer juste. Équilibre trouvé par itérations et allers-retours terrain, V2 retravaillée après tests utilisateurs.</p>
   </div>
 
   <div data-reveal class="study__meta">
@@ -332,11 +332,12 @@
     <img src="assets/images/ibat-temps/ibat-temps-app.webp" alt="Application IBAT Temps" style="object-fit:contain; background:var(--c-surface);" loading="lazy">
     <span class="study__image-label">IBAT TEMPS</span>
   </div>
-  <p data-reveal class="study__caption">La grille hebdomadaire : saisie directe dans la cellule.</p>
+  <p data-reveal class="study__caption">L'application mobile : l'accueil du salarié, et le pointage de la semaine avec saisie directe dans la cellule.</p>
 
   <div data-reveal class="study__block">
     <div class="mono-label--sm mono-label--green" style="margin-bottom:14px;">LE PROBLÈME</div>
     <p>Le suivi des heures se faisait au papier-crayon, avec re-saisie ultérieure et aucune centralisation. Les heures notées sur le terrain étaient ressaisies plus tard, source d'erreurs et de perte de temps, et personne n'avait de vue consolidée fiable.</p>
+    <p>Capturer au plus près du terrain imposait le mobile. C'est là que la difficulté a commencé : le pointage se fait debout sur un chantier, souvent à une main, et il demande pourtant beaucoup d'information au même endroit. Les heures par chantier et par jour, les absences, les heures locatives, et derrière, les règles qui conditionnent la saisie, zones de trajet, paniers repas, convention collective du bâtiment, plus la configuration propre à chaque client.</p>
   </div>
 
   <div data-reveal class="study__block">
@@ -357,9 +358,10 @@
 
   <div data-reveal class="arbitrage">
     <div class="mono-label--sm" style="margin-bottom:18px;">L'ARBITRAGE QUE J'AI TRANCHÉ</div>
-    <h3 class="arbitrage__title">Tout voir d'un coup d'œil, sans renoncer à éditer vite</h3>
-    <p>Le suivi des heures pose un dilemme classique des interfaces data-rich : pour décider, il faut une vue d'ensemble dense ; mais pour saisir vite sur le terrain, il faut pouvoir éditer directement. Densité et manipulation directe tirent en sens opposés.</p>
-    <p>J'ai conçu la vue pour concilier les deux : une grille qui montre la semaine entière d'un seul tenant, où la saisie et la correction se font directement dans la cellule, là où l'œil est déjà posé, sans ouvrir un formulaire à part. La manipulation directe se fait <em>dans</em> la densité, pas à côté d'elle.</p>
+    <h3 class="arbitrage__title">Une semaine entière sur un écran de téléphone</h3>
+    <p>Trois exigences tiraient dans des directions différentes. L'écran devait rester lisible d'un coup d'œil, porter assez d'information pour pointer juste, et ne pas ralentir une saisie faite debout. Sur un écran de bureau, on arbitre entre densité et manipulation directe. Sur un téléphone, la place manque pour les deux.</p>
+    <p>J'ai conçu la vue pour les concilier malgré tout : la semaine entière d'un seul tenant, où la saisie et la correction se font directement dans la cellule, là où l'œil est déjà posé, sans ouvrir un formulaire à part. La manipulation directe se fait <em>dans</em> la densité, pas à côté d'elle.</p>
+    <p>Je ne l'ai pas trouvé du premier coup. L'équilibre est venu par itérations successives, nourries d'allers-retours sur le terrain pour voir ce qui se consultait vraiment et ce qui pouvait rester à un geste.</p>
   </div>
 
   <div data-reveal class="study__block">
